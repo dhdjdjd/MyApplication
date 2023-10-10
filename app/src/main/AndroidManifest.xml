@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 读短信权限 -->
+    <uses-permission android:name="android.permission.READ_SMS" /> <!-- 读取上网记录权限 -->
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" /> <!-- 读取通话记录 -->
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="坤坤风控贷款"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".AnHome4Activity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".AnHome3Activity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".AnHome2Activity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".AnHome1Activity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".ImproveActivity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".AchieveActivity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".BMTestActivity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".BorrowMidActivity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".SuccessScoreActivity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".SuccessCustomActivity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".LowCashActivity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".FallureActivity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".BeforeBActivity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".Modifyactivity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".Fragement_activity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".RegisterActivity2"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".FunctionActivity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/AppCompatTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

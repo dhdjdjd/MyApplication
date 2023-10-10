@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F3F3"
+    tools:context=".ui.notifications.NotificationsFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/color1"
+    android:orientation="vertical"
+    >
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/t1head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextAppearance="@style/TitleText"
+        app:subtitleTextAppearance="@style/SubTitleText"
+        />
+
+    <com.example.myapplication.Views.RoundImageViewByXfermode
+        android:id="@+id/avatar_image"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_margin="10dp"
+        android:layout_x="1dp"
+        android:layout_y="1dp"
+        android:src="@drawable/headpicture" />
+
+
+</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lcbgc1"
+    tools:context=".LowCashActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tl_lcc1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextAppearance="@style/TitleText"
+        app:titleTextColor="@color/black"
+        android:background="#F3F3F3"/>
+
+    <TextView
+        android:id="@+id/tv_lcc"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@+id/tl_lcc1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="身份信息填写"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/ve_llcv"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_alignTop="@+id/tv_lcc"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/lcbgc2"
+        android:translationZ="25dp"
+        android:outlineAmbientShadowColor="#B309101D"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/et_llce"
+        android:layout_alignEnd="@+id/et_llce"
+        android:layout_alignBottom="@+id/et_llce"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="188dp"
+        android:layout_marginBottom="0dp"
+        android:text="*真实姓名"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:elevation="25dp"/>
+
+    <EditText
+        android:id="@+id/et_llce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_llcv"
+        android:layout_alignTop="@+id/ve_llcv"
+        android:layout_alignEnd="@+id/ve_llcv"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="10dp"
+        android:elevation="25dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/et_llce2"
+        android:layout_alignEnd="@+id/et_llce2"
+        android:layout_alignBottom="@+id/et_llce2"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="188dp"
+        android:layout_marginBottom="0dp"
+        android:text="*身份证号"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:elevation="25dp"/>
+
+    <EditText
+        android:id="@+id/et_llce2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/et_llce"
+        android:layout_alignTop="@+id/et_llce"
+        android:layout_alignEnd="@+id/et_llce"
+        android:layout_alignBottom="@+id/et_llce"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-80dp"
+        android:elevation="25dp"/>
+
+    <TextView
+        android:id="@+id/tv_llc2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/et_llce2"
+        android:layout_alignEnd="@+id/ve_llcv"
+        android:layout_alignBottom="@+id/et_llce2"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="-60dp"
+        android:text="我同意相关信息收集协议"
+        android:textSize="11dp"
+        android:elevation="25dp"/>
+
+    <CheckBox
+        android:id="@+id/cb_lcc1"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_alignStart="@+id/tv_llc2"
+        android:layout_alignTop="@+id/tv_llc2"
+        android:layout_alignBottom="@+id/tv_llc2"
+        android:layout_marginStart="-30dp"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="9dp"
+        android:elevation="25dp"/>
+
+    <Button
+        android:id="@+id/but_lcc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_llcv"
+        android:layout_alignTop="@+id/et_llce2"
+        android:layout_alignEnd="@+id/ve_llcv"
+        android:layout_alignBottom="@+id/et_llce2"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="-145dp"
+        android:text="提     交"
+        android:background="@drawable/butss_bc"
+        android:textSize="16dp"
+        android:translationZ="25dp"
+        android:stateListAnimator="@null"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ve_llcv"
+        android:layout_alignStart="@+id/ve_llcv"
+        android:layout_alignEnd="@+id/ve_llcv"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="0dp"
+        android:text="        本次填写完全遵守严格的保密协议，不会将信息利用或泄露，请放心填写"
+        android:textSize="12dp" />
+
+
+</RelativeLayout>

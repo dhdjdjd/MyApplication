@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BorrowMidActivity"
+    android:background="@drawable/lcbgc1">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tl_bmb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextAppearance="@style/TitleText"
+        app:titleTextColor="@color/black"
+        android:background="#F3F3F3"
+        />
+
+    <View
+        android:id="@+id/ve_bmb1"
+        android:layout_width="wrap_content"
+        android:layout_height="600dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/shape_rect_white2"
+        android:translationZ="25dp"
+        android:outlineAmbientShadowColor="#B309101D"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_bmb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_bmb1"
+        android:layout_alignTop="@+id/ve_bmb1"
+        android:layout_alignEnd="@+id/ve_bmb1"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="15dp"
+        android:text="为了确保您贷款之后的信用\n我们将收集您的如下信息:"
+        android:translationZ="25dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tv_fub5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_bmb1"
+        android:layout_alignTop="@+id/tv_bmb1"
+        android:layout_alignEnd="@+id/tv_bmb1"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="0dp"
+        android:text="· 通讯录信息"
+        android:translationZ="25dp"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_fub6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_fub5"
+        android:layout_alignTop="@+id/tv_fub5"
+        android:layout_alignEnd="@+id/tv_fub5"
+        android:layout_alignBottom="@+id/tv_fub5"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="0dp"
+        android:text="· 通话记录信息"
+        android:translationZ="25dp"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_fub7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_fub6"
+        android:layout_alignTop="@+id/tv_fub6"
+        android:layout_alignEnd="@+id/tv_fub6"
+        android:layout_alignBottom="@+id/tv_fub6"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="0dp"
+        android:text="· 手机中APP列表"
+        android:translationZ="25dp"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_fub8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_fub7"
+        android:layout_alignTop="@+id/tv_fub7"
+        android:layout_alignEnd="@+id/tv_fub7"
+        android:layout_alignBottom="@+id/tv_fub7"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="0dp"
+        android:text="· 当前的位置信息"
+        android:translationZ="25dp"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        />
+
+    <Button
+        android:id="@+id/but_bm1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_bmb"
+        android:layout_alignStart="@+id/ve_bmb1"
+        android:layout_alignEnd="@+id/ve_bmb1"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="70dp"
+        android:translationZ="25dp"
+        android:stateListAnimator="@null"
+        android:background="@drawable/butss_bc3"
+        android:textColor="@color/black"
+        android:text="好的\n返回主页"
+        android:textSize="16dp"
+        />
+
+    <ImageView
+        android:id="@+id/img_bmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bmpic"
+        android:translationZ="25dp"
+        android:layout_alignStart="@+id/tv_fub8"
+        android:layout_alignTop="@+id/tv_fub8"
+        android:layout_alignEnd="@+id/tv_fub8"
+        android:layout_alignBottom="@+id/tv_fub8"
+        android:layout_marginBottom="-150dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="0dp"
+        />
+
+</RelativeLayout>

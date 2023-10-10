@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BMTestActivity"
+    android:background="@drawable/lcbgc1">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tl_bmt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F3F3F3"
+        app:titleTextAppearance="@style/TitleText"
+        app:titleTextColor="@color/black" />
+
+    <View
+        android:id="@+id/ve_bmt1"
+        android:layout_width="wrap_content"
+        android:layout_height="600dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/shape_rect_white2"
+        android:translationZ="25dp"
+        android:outlineAmbientShadowColor="#B309101D"
+        />
+
+    <TextView
+        android:id="@+id/tv_bmt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_bmt1"
+        android:layout_alignTop="@+id/ve_bmt1"
+        android:layout_alignEnd="@+id/ve_bmt1"
+        android:layout_alignBottom="@+id/ve_bmt1"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="500dp"
+        android:text="根据您的状况信息，我们对您的评定为:"
+        android:translationZ="25dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tv_bmt2"
+        android:layout_width="23dp"
+        android:layout_height="38dp"
+        android:layout_alignStart="@+id/tv_bmt1"
+        android:layout_alignTop="@+id/tv_bmt1"
+        android:layout_alignEnd="@+id/tv_bmt1"
+        android:layout_alignBottom="@+id/tv_bmt1"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-130dp"
+        android:text="正 常"
+        android:translationZ="25dp"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        android:textColor="#3D68E8"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_bmt1"
+        android:layout_alignTop="@+id/tv_bmt2"
+        android:layout_alignEnd="@+id/ve_bmt1"
+        android:layout_alignBottom="@+id/tv_bmt2"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-250dp"
+        android:translationZ="25dp"
+        app:srcCompat="@drawable/bmtpic1" />
+
+    <Button
+        android:id="@+id/btn_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_bmt1"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignEnd="@+id/ve_bmt1"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="-90dp"
+        android:translationZ="25dp"
+        android:stateListAnimator="@null"
+        android:text="返回主页"
+        android:background="@drawable/butss_bc"
+        />
+
+</RelativeLayout>

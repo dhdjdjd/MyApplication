@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="55dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/____" />
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:textSize="50sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <EditText
+        android:id="@+id/ed_1"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:hint="设置您的账号名"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:maxLines="1"
+        android:background="@drawable/round_textview"
+        android:maxLength="18"
+        />
+    <EditText
+        android:id="@+id/ed_2"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:hint="输入您的手机号"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:maxLines="1"
+        android:layout_gravity="center"
+        android:maxLength="20"
+        android:background="@drawable/round_textview"
+        />
+    <EditText
+        android:id="@+id/ed_3"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:hint="设置您的密码"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:maxLines="1"
+        android:maxLength="20"
+        android:background="@drawable/round_textview"
+        />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:text="注册"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/round_button"
+            />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
+        />
+
+
+</LinearLayout>

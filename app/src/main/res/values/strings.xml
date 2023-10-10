@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_fragement">Fragement_activity</string>
+    <string name="title_home">首页</string>
+    <string name="title_dashboard">通知</string>
+    <string name="title_notifications">个人</string>
+</resources>
