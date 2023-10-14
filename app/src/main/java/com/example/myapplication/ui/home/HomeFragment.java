@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -20,6 +22,7 @@ import com.example.myapplication.AnHome4Activity;
 import com.example.myapplication.BMTestActivity;
 import com.example.myapplication.BeforeBActivity;
 import com.example.myapplication.BorrowMidActivity;
+import com.example.myapplication.ChatBotActivity;
 import com.example.myapplication.R;
 
 public class HomeFragment extends Fragment {
@@ -67,7 +70,7 @@ public class HomeFragment extends Fragment {
         BUT_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), AnHome4Activity.class);
+                Intent intent = new Intent(getActivity(), ChatBotActivity.class);
                 startActivity(intent);
             }
         });

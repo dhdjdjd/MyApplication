@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity  {
         et_password = findViewById(R.id.et_2);
         tv_result = findViewById(R.id.tv_result);
         cb_lcc1 = findViewById(R.id.cb_lcc1);
+        /*findViewById(R.id.btn_test).setOnClickListener(v ->{
+            startActivity(new Intent(this, ChatBotActivity.class));
+        });*/
         findViewById(R.id.btn_login).setOnClickListener(v -> {
             if(cb_lcc1.isChecked() != true) {
                 AlertDialog.Builder builder1 = new AlertDialog.Builder(this);

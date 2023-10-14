@@ -167,7 +167,7 @@
         android:layout_marginTop="70dp"
         android:layout_marginEnd="40px"
         android:layout_marginBottom="-70dp"
-        android:text="还款细则          "
+        android:text="AI答疑          "
         android:background="@drawable/butss_bc"
         android:textAlignment="textEnd"/>
 

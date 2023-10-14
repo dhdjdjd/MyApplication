@@ -128,7 +128,20 @@
         android:text="login"
         android:textColor="@color/white"/>
 
+    <!--<Button
+        android:id="@+id/btn_test"
+        android:layout_width="107dp"
+        android:layout_height="20dp"
+        android:text="Test"/>-->
 
+
+    <TextView
+        android:id="@+id/btnfind"
+        android:layout_width="89dp"
+        android:layout_height="115dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="找回密码" />
 
     <TextView
         android:id="@+id/tv_result"
@@ -160,13 +173,6 @@
             android:gravity="center"
             android:text="测试登录" />
 
-        <TextView
-            android:id="@+id/btnfind"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="25dp"
-            android:gravity="center"
-            android:text="找回密码" />
     </LinearLayout>
 
 
