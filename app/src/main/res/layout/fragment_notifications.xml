@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="360dp"
+    android:layout_height="800dp"
     android:orientation="vertical"
-    android:background="#F3F3F3"
+    android:background="#FFFFFF"
     tools:context=".ui.notifications.NotificationsFragment">
-<LinearLayout
+<RelativeLayout
+    android:id="@+id/re1"
     android:layout_width="match_parent"
-    android:layout_height="250dp"
+    android:layout_height="230dp"
     android:background="@drawable/color1"
-    android:orientation="vertical"
     >
 
 
@@ -25,14 +25,150 @@
 
     <com.example.myapplication.Views.RoundImageViewByXfermode
         android:id="@+id/avatar_image"
-        android:layout_width="78dp"
-        android:layout_height="78dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_margin="10dp"
+        android:layout_below="@+id/t1head"
         android:layout_x="1dp"
         android:layout_y="1dp"
         android:src="@drawable/headpicture" />
+    <TextView
+        android:id="@+id/fixedname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="您好，尊敬的"
+        android:textSize="22sp"
+        android:layout_toRightOf="@+id/avatar_image"
+        android:layout_alignTop="@+id/avatar_image"
+        android:layout_marginTop="15dp"
+        />
+    <TextView
+        android:id="@+id/achievement"
+        android:layout_width="85dp"
+        android:layout_alignLeft="@+id/fixedname"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="  查看成就>>>"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/fixedname"
+        android:background="@drawable/circular_background"
+        android:layout_marginTop="15dp"
+        />
+    <TextView
+        android:id="@+id/prevent"
+        android:layout_width="95dp"
+        android:layout_toRightOf="@+id/achievement"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="  消费者权益>>>"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/fixedname"
+        android:background="@drawable/circular_background"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:id="@+id/changedname"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_toRightOf="@+id/fixedname"
+        android:layout_alignTop="@+id/avatar_image"
+        android:layout_marginTop="15dp"
+        />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/changedname"
+        android:layout_alignTop="@+id/changedname"
+        android:background="@drawable/_7_____x16"/>
+
+    <View
+        android:id="@+id/suqre"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="180dp"
+        android:background="@color/gbule"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="账户总览"
+        android:textSize="22sp"
+        android:layout_toRightOf="@+id/suqre"
+        android:layout_alignTop="@+id/suqre"
+        android:layout_marginLeft="10dp"/>
 
 
-</LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        app:cardElevation="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="#FFFFFF"
+        android:layout_below="@+id/re1"
+        android:layout_marginLeft="30dp">
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+
+        >
+
+        </RelativeLayout>
+</androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/suqre1"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/card1"
+        android:layout_marginTop="20dp"
+        android:background="@color/gbule"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="借贷记录"
+        android:textSize="22sp"
+        android:layout_toRightOf="@+id/suqre1"
+        android:layout_alignTop="@+id/suqre1"
+        android:layout_marginLeft="10dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:layout_below="@+id/suqre1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp">
+        <RelativeLayout
+            android:id="@+id/re2"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="top"
+
+            >
+        </RelativeLayout>
+        <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="50dp"
+            android:background="#D6D2D2" />
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+
+            >
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

@@ -50,4 +50,5 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.5.3'
     implementation "androidx.navigation:navigation-ui:2.5.3"
     implementation 'com.android.support:multidex:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
 }
