@@ -10,6 +10,9 @@
     <color name="gbule">#4169E1</color>
     <color name="grey">#D8D8D8</color>
     <color name="red">#FF0000</color>
+    <color name="pink">#E98989</color>
+    <color name="lbule">#0084e8</color>
+    <color name="tp">#00FFFFFF</color>
 
     <color name="tab_text_selected">#0084e8</color>
     <color name="tab_text_normal">#7597b3</color>

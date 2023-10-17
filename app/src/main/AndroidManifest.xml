@@ -21,14 +21,23 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="坤坤风控贷款"
+        android:label="贷易控"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity android:name=".ChatBotActivity"
+        <activity
+            android:name=".SubmitActivity"
             android:exported="false"
-            android:theme="@style/AppCompatTheme"/>
+            android:theme="@style/AppCompatTheme">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ChatBotActivity"
+            android:exported="false"
+            android:theme="@style/AppCompatTheme" />
         <activity
             android:name=".AnHome4Activity"
             android:exported="false"

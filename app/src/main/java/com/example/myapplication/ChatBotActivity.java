@@ -47,7 +47,6 @@ public class ChatBotActivity extends AppCompatActivity{
         mSelfName = getIntent().getStringExtra("self_name");
         mFriendName = getIntent().getStringExtra("friend_name");
         initView(); // 初始化视图
-        //initSocket(); //初始化套接字
     }
     // 初始化视图
     private void initView() {
@@ -58,38 +57,14 @@ public class ChatBotActivity extends AppCompatActivity{
         ll_show = findViewById(R.id.ll_show);
 
         findViewById(R.id.iv_back).setOnClickListener(v -> finish());
-        /*findViewById(R.id.ib_img).setOnClickListener(v -> {
-            // 创建一个内容获取动作的意图（准备跳到系统相册）
-            Intent albumIntent = new Intent(Intent.ACTION_GET_CONTENT);
-            albumIntent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, false); // 是否允许多选
-            albumIntent.setType("image/*"); // 类型为图像
-            startActivityForResult(albumIntent, CHOOSE_CODE); // 打开系统相册
-        });*/
         findViewById(R.id.btn_send).setOnClickListener(v -> sendMessage());
         /*tv_title.setText(mFriendName);*/
         tv_title.setText("AI答疑");
     }
 
-    // 初始化套接字
-    /*private void initSocket() {
-        mSocket = MainApplication.getInstance().getSocket();
-        // 等待接收好友消息
-        mSocket.on("receive_friend_message", (args) -> {
-            JSONObject json = (JSONObject) args[0];
-            Log.d(TAG, "receive_friend_message:"+json.toString());
-            MessageInfo message = new Gson().fromJson(json.toString(), MessageInfo.class);
-            // 往聊天窗口添加文本消息
-            runOnUiThread(() -> appendChatMsg(message.from, message.content, false));
-        });
-        // 等待接收好友图片
-        mSocket.on("receive_friend_image", (args) -> receiveImage(args));
-    }*/
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        /*mSocket.off("receive_friend_message"); // 取消接收好友消息
-        mSocket.off("receive_friend_image"); // 取消接收好友图片*/
     }
 
     // 发送聊天消息
@@ -102,10 +77,7 @@ public class ChatBotActivity extends AppCompatActivity{
         et_input.setText("");
         ViewUtil.hideOneInputMethod(this, et_input); // 隐藏软键盘
         appendChatMsg(mSelfName, content, true); // 往聊天窗口添加文本消息
-        // 下面向Socket服务器发送聊天消息
-        /*MessageInfo message = new MessageInfo(mSelfName, mFriendName, content);
-        SocketUtil.emit(mSocket, "send_friend_message", message);*/
-        //TODO 向后端发送请求，得到ChatGPT回答
+        appendChatMsg("ChatGpt","请稍侯",false);
         getAnsFromChatGPTAndSet(content);
     }
 
@@ -136,7 +108,7 @@ public class ChatBotActivity extends AppCompatActivity{
                 .readTimeout(300, TimeUnit.SECONDS)//设置读取超时时间
                 .writeTimeout(300, TimeUnit.SECONDS)//设置写的超时时间
                 .build();; // 创建一个okhttp客户端对象
-        Request request = new Request.Builder().get().url("http://192.168.0.178:8088/chat/bot/ans?question=" + question).build();
+        Request request = new Request.Builder().get().url("http://113.54.239.24:8088/chat/bot/ans?question=" + question).build();
         Call call = client.newCall(request); // 根据请求结构创建调用对象
         // 加入HTTP请求队列。异步调用，并设置接口应答的回调方法
         call.enqueue(new Callback() {

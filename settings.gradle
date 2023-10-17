@@ -10,6 +10,7 @@ pluginManagement {
         maven { url 'https://maven.aliyun.com/repository/public'}
         // 以下添加华为的仓库地址，引入HMS需要
         maven { url 'https://developer.huawei.com/repo/'}
+        maven { url 'https://jitpack.io' }
     }
 }
 dependencyResolutionManagement {
@@ -24,6 +25,7 @@ dependencyResolutionManagement {
         maven { url 'https://maven.aliyun.com/repository/public'}
         // 以下添加华为的仓库地址，引入HMS需要
         maven { url 'https://developer.huawei.com/repo/'}
+        maven { url 'https://jitpack.io' }
     }
 }
 rootProject.name = "My Application"
