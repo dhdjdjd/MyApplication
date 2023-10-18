@@ -1,22 +1,11 @@
 package com.example.myapplication;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
-import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.location.Criteria;
-import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -26,30 +15,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.myapplication.Util.NumTtanUtil;
 import com.example.myapplication.bean.AppInfo;
 import com.example.myapplication.bean.CallLogRecord;
 import com.example.myapplication.bean.Contact;
-import com.example.myapplication.task.GetAddressTask;
-import com.example.myapplication.Util.CommunicationUtil;
-import com.example.myapplication.Util.DateUtil;
-import com.example.myapplication.Util.NumTtanUtil;
-import com.example.myapplication.Util.PemUtil;
-import com.example.myapplication.Util.SwitchUtil;
-import com.github.mikephil.charting.charts.RadarChart;
-import com.github.mikephil.charting.components.AxisBase;
-import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.data.RadarData;
-import com.github.mikephil.charting.data.RadarDataSet;
-import com.github.mikephil.charting.data.RadarEntry;
-import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -64,7 +38,8 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class SuccessScoreActivity extends AppCompatActivity implements View.OnClickListener {
+public class SubmitActivity extends AppCompatActivity implements View.OnClickListener {
+
     private Context mContext = this;
     private Map<String, String> providerMap = new HashMap<>();
     //private TextView tv_location; // 声明一个文本视图对象
@@ -78,18 +53,17 @@ public class SuccessScoreActivity extends AppCompatActivity implements View.OnCl
     private List<Contact> contactList;
     private String sendLoc = "";
 
+    private EditText et_ssb1;
+    private EditText et_ssb2;
+    private EditText et_ssb3;
 
     private String realname;
     private String personid;
 
-    private RadarChart radar;
-    List<RadarEntry>list;
-    List<RadarEntry>list2;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_success_score);
+        setContentView(R.layout.activity_submit);
 
         Toolbar tl_ssb = findViewById(R.id.tl_ssb);
         tl_ssb.setTitle("小额现金贷");
@@ -102,108 +76,26 @@ public class SuccessScoreActivity extends AppCompatActivity implements View.OnCl
             }
         });
 
-        /*Bundle sbundle = getIntent().getExtras();
+        Bundle sbundle = getIntent().getExtras();
         int iscore = sbundle.getInt("Score");
         realname = sbundle.getString("realname");
         personid = sbundle.getString("uid");
-        String sscore = "" + iscore;*/
-        /*TextView tv_ssb2 = findViewById(R.id.tv_ssb2);
-        tv_ssb2.setText(sscore);*/
+        String sscore = "" + iscore;
+        TextView tv_ssb2 = findViewById(R.id.tv_ssb2);
+        tv_ssb2.setText(sscore);
 
-        /*et_ssb1 = findViewById(R.id.et_ssb1);
+        et_ssb1 = findViewById(R.id.et_ssb1);
         et_ssb2 = findViewById(R.id.et_ssb2);
-        et_ssb3 = findViewById(R.id.et_ssb3);*/
+        et_ssb3 = findViewById(R.id.et_ssb3);
         Button but_ssb1 = findViewById(R.id.but_ssb1);
         but_ssb1.setOnClickListener(this);
-
-
-        radar = (RadarChart) findViewById(R.id.radar);
-        list=new ArrayList<>();
-
-        list.add(new RadarEntry(30));
-        list.add(new RadarEntry(35));
-        list.add(new RadarEntry(40));
-        list.add(new RadarEntry(35));
-        list.add(new RadarEntry(20));
-
-
-        RadarDataSet radarDataSet=new RadarDataSet(list,"男性");
-        radarDataSet.setColor(ContextCompat.getColor(this, R.color.pink));
-        RadarData radarData=new RadarData(radarDataSet);
-        radar.setData(radarData);
-
-        //Y轴最小值不设置会导致数据中最小值默认成为Y轴最小值
-        radar.getYAxis().setAxisMinimum(0);
-
-        //大字的颜色（中心点和各顶点的连线）
-        radar.setWebColor(Color.CYAN);
-        //所有五边形的颜色
-        radar.setWebColorInner(ContextCompat.getColor(this, R.color.gbule));
-        //整个控件的背景颜色
-        radar.setBackgroundColor(ContextCompat.getColor(this, R.color.tp));
-
-        XAxis xAxis=radar.getXAxis();
-        xAxis.setTextColor(ContextCompat.getColor(this, R.color.lbule));//X轴字体颜色
-        xAxis.setTextSize(10);     //X轴字体大小
-        //自定义X轴坐标描述（也就是五个顶点上的文字,默认是0、1、2、3、4）
-        xAxis.setValueFormatter(new IAxisValueFormatter() {
-            @Override
-            public String getFormattedValue(float v, AxisBase axisBase) {
-                if (v==0){
-                    return "贷前信用";
-                }
-                if (v==1){
-                    return "资产估计";
-                }
-                if (v==2){
-                    return "健康状况";
-                }
-                if (v==3){
-                    return "收入状况";
-                }
-                if (v==4){
-                    return "家庭开支";
-                }
-                return "";
-            }
-        });
-
-
-        //是否绘制雷达框上对每个点的数据的标注    和Y轴坐标点一般不同时存在 否则显得很挤  默认为true
-        radarDataSet.setDrawValues(false);
-        radarDataSet.setValueTextSize(8);  //数据值得字体大小（这里只是写在这）
-        radarDataSet.setValueTextColor(Color.CYAN);//数据值得字体颜色（这里只是写在这）
-
-        YAxis yAxis=radar.getYAxis();
-        //是否绘制Y轴坐标点  和雷达框数据一般不同时存在 否则显得很挤 默认为true
-        yAxis.setDrawLabels(true);
-        yAxis.setTextColor(Color.GRAY);//Y轴坐标数据的颜色
-        yAxis.setAxisMaximum(50);   //Y轴最大数值
-        yAxis.setAxisMinimum(0);   //Y轴最小数值
-        //Y轴坐标的个数    第二个参数一般填false     true表示强制设置标签数 可能会导致X轴坐标显示不全等问题
-        yAxis.setLabelCount(10,false);
-
-
-        //对于右下角一串字母的操作
-        radar.getDescription().setEnabled(false);                  //是否显示右下角描述
-        radar.getDescription().setText("这是修改那串英文的方法");    //修改右下角字母的显示
-        radar.getDescription().setTextSize(20);                    //字体大小
-        radar.getDescription().setTextColor(Color.CYAN);             //字体颜色
-
-        //图例
-        Legend legend=radar.getLegend();
-        legend.setEnabled(false);    //是否显示图例
-        //legend.setPosition(Legend.LegendPosition.BELOW_CHART_CENTER);    //图例的位置
-
-
     }
-
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.but_ssb1:
-                /*String money = et_ssb1.getText().toString();
+                String money = et_ssb1.getText().toString();
                 String Lmoney = et_ssb2.getText().toString();
                 String Btime = et_ssb3.getText().toString();
                 int Nmoney = Integer.parseInt(money);
@@ -212,7 +104,7 @@ public class SuccessScoreActivity extends AppCompatActivity implements View.OnCl
                 if (Nmoney <= 0 || Nmoney > 20000 || Ntime <= 0 || Ntime >24) {
                     Toast.makeText(mContext, "请输入正确金额或时间", Toast.LENGTH_SHORT).show();
                 } else {
-                    if (Objects.equals(Lmoney,NumTtanUtil.getChineseNumber(money)) ) {
+                    if (Objects.equals(Lmoney, NumTtanUtil.getChineseNumber(money)) ) {
                         Toast.makeText(mContext, "大写金额与小写金额不匹配", Toast.LENGTH_SHORT).show();
                     }else {
                         String jsonString = "";
@@ -245,7 +137,7 @@ public class SuccessScoreActivity extends AppCompatActivity implements View.OnCl
                             @Override
                             public void onFailure(Call call, IOException e) { // 请求失败
                                 // 回到主线程操纵界面
-                                runOnUiThread(() -> Toast.makeText(SuccessScoreActivity.this, "调用HTTP接口报错："+e.getMessage(), Toast.LENGTH_SHORT).show());
+                                runOnUiThread(() -> Toast.makeText(SubmitActivity.this, "调用HTTP接口报错："+e.getMessage(), Toast.LENGTH_SHORT).show());
                                 //tv_result.setText("调用登录接口报错："+e.getMessage()));
                             }
 
@@ -254,7 +146,7 @@ public class SuccessScoreActivity extends AppCompatActivity implements View.OnCl
                                 String resp = response.body().string();
                                 // 回到主线程操纵界面
                                 runOnUiThread(() -> {
-                                    Toast.makeText(SuccessScoreActivity.this, "调用HTTP接口返回：\n"+resp, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(SubmitActivity.this, "调用HTTP接口返回：\n"+resp, Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(mContext,BorrowMidActivity.class));
                                 });
 
@@ -262,8 +154,8 @@ public class SuccessScoreActivity extends AppCompatActivity implements View.OnCl
                             }
                         });
                     }
-                }*/
-                startActivity(new Intent(this, SubmitActivity.class));
+                }
+
         }
     }
 }

@@ -19,6 +19,7 @@ import com.example.myapplication.AchieveActivity;
 import com.example.myapplication.ImproveActivity;
 import com.example.myapplication.Modifyactivity;
 import com.example.myapplication.R;
+import com.example.myapplication.SuccessScoreActivity;
 
 
 public class DashboardFragment extends Fragment {
@@ -45,7 +46,7 @@ public class DashboardFragment extends Fragment {
         linearLayout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), AchieveActivity.class);
+                Intent intent = new Intent(getActivity(), SuccessScoreActivity.class);
                 startActivity(intent);
             }
         });
