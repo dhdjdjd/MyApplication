@@ -29,13 +29,13 @@
     <!--android:angle="270"//效果是：是从上到下，按照开始颜色到结束颜色来渲染的-->
 
     <gradient
-        android:startColor="#95F5DCDC"
-        android:centerColor="#95F5DCDC"
-        android:endColor="#95F5DCDC"
+        android:startColor="@color/gbule"
+        android:centerColor="@color/gbule"
+        android:endColor="@color/gbule"
         android:type="linear"
         android:angle="315" />
 
-    <corners android:radius="20dp"/>
+    <corners android:radius="15dp"/>
 
 
 </shape>

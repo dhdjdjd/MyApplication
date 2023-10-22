@@ -38,6 +38,7 @@ public class LowCashActivity extends AppCompatActivity implements View.OnClickLi
     private EditText et_lcce;
     private EditText et_lcce2;
     private Button but_llc1;
+    private Button but_llc2;
     private CheckBox cb_lcc1;
     private Context mContext = this;
     private String BType = "";
@@ -77,13 +78,50 @@ public class LowCashActivity extends AppCompatActivity implements View.OnClickLi
         et_lcce = findViewById(R.id.et_llce);
         et_lcce2 = findViewById(R.id.et_llce2);
         but_llc1 = findViewById(R.id.but_lcc1);
+        but_llc2 = findViewById(R.id.but_llc2);
         cb_lcc1 = findViewById(R.id.cb_lcc1);
         but_llc1.setOnClickListener(this);
+        but_llc2.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+            case R.id.but_llc2:{
+                // 创建构造器
+                AlertDialog.Builder builder = new AlertDialog.Builder(LowCashActivity.this);
+                //builder.setIcon(R.mipmap.ic_launcher);
+                builder.setTitle("选择证件类型");
+                // 设置内容,
+                final String[] cities = {"中国居民身份证", "护照", "港澳通行证"};
+                builder.setSingleChoiceItems(cities, 0, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // 传出数据？？？
+                        //Toast.makeText(MainActivity.this, "选中的选项为: " + which, Toast.LENGTH_SHORT).show();
+                        but_llc2.setText(cities[which]);
+                    }
+                });
+
+                builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+                builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // 不进行操作
+                        but_llc2.setText("点击以选择您的证件类型");
+                    }
+                });
+
+                // 显示dialog
+                builder.create().show();
+                break;
+            }
             case R.id.but_lcc1:
                 realname = et_lcce.getText().toString();
                 personid = et_lcce2.getText().toString();

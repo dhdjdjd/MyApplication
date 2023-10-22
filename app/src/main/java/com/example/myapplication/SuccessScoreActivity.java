@@ -144,7 +144,7 @@ public class SuccessScoreActivity extends AppCompatActivity implements View.OnCl
 
         XAxis xAxis=radar.getXAxis();
         xAxis.setTextColor(ContextCompat.getColor(this, R.color.lbule));//X轴字体颜色
-        xAxis.setTextSize(10);     //X轴字体大小
+        xAxis.setTextSize(12);     //X轴字体大小
         //自定义X轴坐标描述（也就是五个顶点上的文字,默认是0、1、2、3、4）
         xAxis.setValueFormatter(new IAxisValueFormatter() {
             @Override

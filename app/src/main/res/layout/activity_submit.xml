@@ -16,112 +16,52 @@
         android:background="#F3F3F3"
         />
 
-    <View
-        android:id="@+id/ve_ssb1"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="90dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/shape_rect_white2"
-        android:translationZ="25dp"
-        android:outlineAmbientShadowColor="#B309101D"
-        />
-
     <TextView
-        android:id="@+id/tv_ssb1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/ve_ssb1"
-        android:layout_alignTop="@+id/ve_ssb1"
-        android:layout_alignEnd="@+id/ve_ssb1"
-        android:layout_alignBottom="@+id/ve_ssb1"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="80dp"
-        android:text="您的分数是:"
-        android:translationZ="25dp"
-        android:textSize="22dp"
-        android:textColor="@color/black"
-        />
-
-    <TextView
-        android:id="@+id/tv_ssb2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/tv_ssb1"
-        android:layout_alignTop="@+id/tv_ssb1"
-        android:layout_alignEnd="@+id/tv_ssb1"
-        android:layout_alignBottom="@+id/tv_ssb1"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="-8dp"
-        android:layout_marginEnd="-10dp"
-        android:layout_marginBottom="0dp"
-        android:text="94"
-        android:translationZ="30dp"
-        android:textSize="35dp"
-        android:textAlignment="center"
-        android:textColor="@color/gbule"
-        android:textStyle="bold"
-        android:shadowRadius="3.0"
-        android:shadowDx="3"
-        android:shadowDy="3"
-        android:shadowColor="#B309101D"
-        />
-
-    <TextView
-        android:id="@+id/tv_ssb3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/tv_ssb1"
-        android:layout_alignTop="@+id/tv_ssb1"
-        android:layout_alignEnd="@+id/tv_ssb1"
-        android:layout_alignBottom="@+id/tv_ssb1"
+        android:layout_above="@+id/ve_ssb2"
+        android:layout_below="@+id/tl_ssb"
+        android:layout_alignStart="@+id/ve_ssb2"
+        android:layout_alignEnd="@+id/ve_ssb2"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-60dp"
-        android:text="您享有现金贷的额度"
-        android:translationZ="25dp"
-        android:textSize="20dp"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        />
+        android:layout_marginBottom="-100dp"
+        android:text="请认真仔细核对信息，正确填写信息，避免填入错误信息带来不必要的麻烦"
+        android:textSize="12dp"
+        android:textColor="#737373"/>
 
     <View
         android:id="@+id/ve_ssb2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/ve_ssb1"
-        android:layout_alignTop="@+id/ve_ssb1"
-        android:layout_alignEnd="@+id/ve_ssb1"
-        android:layout_alignBottom="@+id/ve_ssb1"
-        android:layout_marginStart="-20dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="-20dp"
-        android:layout_marginBottom="-450dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="250dp"
         android:background="@drawable/shape_rect_white2"
-        android:translationZ="25dp"
         android:outlineAmbientShadowColor="#B309101D"
-        />
+        android:translationZ="25dp" />
 
 
     <EditText
         android:id="@+id/et_ssb1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_alignStart="@+id/ve_ssb2"
         android:layout_alignTop="@+id/ve_ssb2"
         android:layout_alignEnd="@+id/ve_ssb2"
         android:layout_marginStart="111dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="9dp"
-        android:textAlignment="textEnd"
         android:translationZ="25dp"
+        android:text="填写数字，金额应当在0~20000之间"
+        android:textSize="11dp"
+        android:textColor="#AAAAAA"
         />
 
     <TextView
@@ -131,15 +71,15 @@
         android:layout_alignEnd="@+id/et_ssb1"
         android:layout_alignBottom="@+id/et_ssb1"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="192dp"
+        android:layout_marginEnd="210dp"
         android:layout_marginBottom="0dp"
-        android:text="借款金额（元）"
+        android:text="姓             名"
         android:translationZ="25dp"
         android:textColor="@color/black"
         android:textSize="16dp"
         android:textStyle="bold"/>
 
-    <TextView
+    <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/et_ssb1"
@@ -151,23 +91,23 @@
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="-15dp"
         android:text="填写数字，金额应当在0~20000之间"
-        android:translationZ="25dp"
-        android:textSize="12dp"
         android:textAlignment="textEnd"
-        />
+        android:textSize="12dp"
+        android:translationZ="25dp" />-->
 
     <EditText
         android:id="@+id/et_ssb2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_alignStart="@+id/et_ssb1"
         android:layout_alignTop="@+id/et_ssb1"
         android:layout_alignEnd="@+id/et_ssb1"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="0dp"
         android:textAlignment="textEnd"
         android:translationZ="25dp"
+
         />
 
     <TextView
@@ -255,10 +195,9 @@
         android:layout_alignStart="@+id/ve_ssb2"
         android:layout_alignTop="@+id/ve_ssb2"
         android:layout_alignEnd="@+id/ve_ssb2"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="290dp"
-        android:layout_marginEnd="90dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="600dp"
+        android:layout_marginEnd="40dp"
         android:translationZ="25dp"
         android:stateListAnimator="@null"
         android:background="@drawable/butss_bc3"

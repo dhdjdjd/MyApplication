@@ -34,6 +34,6 @@
         android:type="linear"
         android:angle="90" />
 
-    <corners android:radius="20dp"/>
+    <corners android:radius="10dp"/>
 
 </shape>
