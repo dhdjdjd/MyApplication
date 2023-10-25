@@ -39,7 +39,7 @@
         android:id="@+id/fixedname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="您好，尊敬的"
+        android:text="您好尊敬的"
         android:textSize="22sp"
         android:layout_toRightOf="@+id/avatar_image"
         android:layout_alignTop="@+id/avatar_image"
@@ -72,14 +72,16 @@
         />
     <TextView
         android:id="@+id/changedname"
-        android:layout_width="100dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:textSize="22sp"
         android:layout_toRightOf="@+id/fixedname"
         android:layout_alignTop="@+id/avatar_image"
         android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
         />
     <ImageView
+        android:id="@+id/avtar"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_toRightOf="@+id/changedname"

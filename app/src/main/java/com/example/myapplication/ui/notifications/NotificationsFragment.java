@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -45,9 +46,17 @@ public class NotificationsFragment extends Fragment {
 
         SharedPreferences sharedPreferences = mActivity.getSharedPreferences("riskcon",mActivity.MODE_PRIVATE);
         String username =sharedPreferences.getString("username","");
-        /*TextView textView = root.findViewById(R.id.userid);
+        TextView textView = root.findViewById(R.id.changedname);
+        ImageView imageView = root.findViewById(R.id.avtar);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Modifyactivity.class);
+                startActivity(intent);
+            }
+        });
         textView.setText(username);
-        LinearLayout linearLayout1 = root.findViewById(R.id.lin_xiu);
+        /*LinearLayout linearLayout1 = root.findViewById(R.id.lin_xiu);
         linearLayout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
