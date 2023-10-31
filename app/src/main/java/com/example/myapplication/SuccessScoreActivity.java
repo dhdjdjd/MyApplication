@@ -102,13 +102,13 @@ public class SuccessScoreActivity extends AppCompatActivity implements View.OnCl
             }
         });
 
-        /*Bundle sbundle = getIntent().getExtras();
+        Bundle sbundle = getIntent().getExtras();
         int iscore = sbundle.getInt("Score");
         realname = sbundle.getString("realname");
         personid = sbundle.getString("uid");
-        String sscore = "" + iscore;*/
-        /*TextView tv_ssb2 = findViewById(R.id.tv_ssb2);
-        tv_ssb2.setText(sscore);*/
+        String sscore = "" + iscore;
+        TextView tv_ssb2 = findViewById(R.id.tv_ssb2);
+        //tv_ssb2.setText(sscore);
 
         /*et_ssb1 = findViewById(R.id.et_ssb1);
         et_ssb2 = findViewById(R.id.et_ssb2);

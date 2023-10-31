@@ -141,7 +141,7 @@ public class LowCashActivity extends AppCompatActivity implements View.OnClickLi
                 }else {
                     if (personid.length() != 18) {
                         AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
-                        builder2.setTitle("您的身份证号有误"); // 设置对话框的标题文本
+                        builder2.setTitle("您的证件号有误"); // 设置对话框的标题文本
                         builder2.setMessage("请重新输入一次"); // 设置对话框的内容文本
                         // 设置对话框的肯定按钮文本及其点击监听器
                         builder2.setPositiveButton("好的", new DialogInterface.OnClickListener() {
