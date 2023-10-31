@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.home;
+package com.example.myapplication.Util.ui.home;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -42,7 +42,7 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
 
-        BUT_1=root.findViewById(R.id.but_ss1);
+       /* BUT_1=root.findViewById(R.id.but_ss1);
         BUT_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,7 +97,7 @@ public class HomeFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), BorrowMidActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         Toolbar tl_head = root.findViewById(R.id.t1head);
         tl_head.setTitle("贷易控");
@@ -106,15 +106,14 @@ public class HomeFragment extends Fragment {
         //tl_head.setLogo(R.drawable.ic_app); // 设置工具栏的标志图片
         tl_head.setSubtitle("风险控制RiskControl");// 设置工具栏的副标题文本
         tl_head.setSubtitleTextColor(Color.BLACK); // 设置工具栏的副标题文字颜色
-        tl_head.setBackgroundResource(R.color.white); // 设置工具栏的背景
         //tl_head.setNavigationIcon(R.drawable.ic_back); // 设置工具栏左边的导航图标
         // 给tl_head设置导航图标的点击监听器
         // setNavigationOnClickListener必须放到setSupportActionBar之后，不然不起作用
-        View v_besf = root.findViewById(R.id.v_besf);
+        /*View v_besf = root.findViewById(R.id.v_besf);
         v_besf.setBackgroundResource(R.drawable.shape_rect_gold);
         Button but_bow = root.findViewById(R.id.but_bow);
         but_bow.setBackgroundResource(R.drawable.shape_rect_white);
-        but_bow.setTextColor(Color.parseColor("#4169E1"));
+        but_bow.setTextColor(Color.parseColor("#4169E1"));*/
         tl_head.setNavigationOnClickListener(view -> {
             mActivity.finish(); // 结束当前页面
         });

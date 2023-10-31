@@ -1,20 +1,15 @@
 package com.example.myapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.myapplication.ui.home.HomeFragment;
-import com.example.myapplication.ui.notifications.NotificationsFragment;
+import com.example.myapplication.databinding.ActivityFragementBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
-import com.example.myapplication.databinding.ActivityFragementBinding;
 
 public class Fragement_activity extends AppCompatActivity {
 

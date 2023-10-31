@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
                 Intent intent=null;
-                intent=new Intent(MainActivity.this, FRAhome.class);
+                intent=new Intent(MainActivity.this, activity_fradash.class);
                 startActivity(intent);
             }
         });

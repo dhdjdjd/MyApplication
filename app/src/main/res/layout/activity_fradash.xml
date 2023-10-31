@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="360dp"
+    android:layout_height="200dp"
+    android:background="@color/grey"
+    tools:context=".activity_fradash">
+
+    <com.example.myapplication.Util.MyViewPager
+        android:id="@+id/content_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingClass,MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/points_container"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0px">
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
