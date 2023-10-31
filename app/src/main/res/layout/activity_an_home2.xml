@@ -16,16 +16,41 @@
         android:background="#F3F3F3"
         />
 
+    <TextView
+        android:id="@+id/tv_ah11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_ah11"
+        android:layout_alignEnd="@+id/ve_ah11"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="0dp"
+        android:text="申请条件"
+        android:textSize="32dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_ah11"
+        android:layout_alignTop="@+id/tv_ah11"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="45dp"
+        android:text="本篇内容将带您快速了解申请条件"/>
+
     <View
         android:id="@+id/ve_ah11"
         android:layout_width="wrap_content"
         android:layout_height="600dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/tv_ah11"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="100dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/shape_rect_white2"
         android:translationZ="25dp"
         android:outlineAmbientShadowColor="#B309101D"

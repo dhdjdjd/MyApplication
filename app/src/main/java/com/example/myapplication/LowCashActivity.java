@@ -94,7 +94,7 @@ public class LowCashActivity extends AppCompatActivity implements View.OnClickLi
                 builder.setTitle("选择证件类型");
                 // 设置内容,
                 final String[] cities = {"中国居民身份证", "护照", "港澳通行证"};
-                builder.setSingleChoiceItems(cities, 0, new DialogInterface.OnClickListener() {
+                builder.setSingleChoiceItems(cities, 4, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // 传出数据？？？

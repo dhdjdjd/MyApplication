@@ -24,7 +24,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:text="        请如实填写您的身份信息填写，保证信息的正确性，以便我们对您的资质进行核验。"
+        android:text="请如实填写您的身份信息填写，保证信息的正确性，以便我们对您的资质进行核验。"
         android:textColor="#737373"
         android:textSize="12dp"
         android:textStyle="bold" />
@@ -32,7 +32,7 @@
     <View
         android:id="@+id/ve_llcv"
         android:layout_width="wrap_content"
-        android:layout_height="360dp"
+        android:layout_height="295dp"
         android:layout_alignTop="@+id/tv_lcc"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -166,12 +166,11 @@
         android:layout_alignTop="@+id/et_llce2"
         android:layout_alignEnd="@+id/ve_llcv"
         android:layout_alignBottom="@+id/et_llce2"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="347dp"
-        android:layout_marginEnd="70dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginBottom="-356dp"
         android:background="@drawable/butss_bc3"
-        android:stateListAnimator="@null"
         android:text="提     交"
         android:textSize="16dp"
         android:textColor="@color/white"
@@ -184,9 +183,9 @@
         android:layout_alignStart="@+id/ve_llcv"
         android:layout_alignEnd="@+id/ve_llcv"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="0dp"
-        android:text="        本次填写完全遵守严格的保密协议，不会将信息利用或泄露，请放心填写"
+        android:text="本次填写完全遵守严格的保密协议，不会将信息利用或泄露，请放心填写"
         android:textSize="12dp" />
 
 

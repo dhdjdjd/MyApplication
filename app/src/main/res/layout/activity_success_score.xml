@@ -311,14 +311,13 @@
         android:layout_alignStart="@+id/ve_ssb2"
         android:layout_alignTop="@+id/ve_ssb2"
         android:layout_alignEnd="@+id/ve_ssb2"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="270dp"
-        android:layout_marginEnd="80dp"
-        android:translationZ="25dp"
-        android:stateListAnimator="@null"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/butss_bc3"
         android:text="继     续"
         android:textSize="16dp"
+        android:textColor="@color/white"
         />
 
 
