@@ -155,9 +155,12 @@ public class LowCashActivity extends AppCompatActivity implements View.OnClickLi
                     }else {
                         System.out.println(realname);
                         System.out.println(personid);
-                        String jsonString = "";
                         SharedPreferences sharedPreferences = getSharedPreferences("riskcon",MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("personid", personid);
+                        String jsonString = "";
                         String uid =sharedPreferences.getString("uid","");
+                        editor.commit();
                         try {
                             JSONObject jsonObject = new JSONObject();
                             jsonObject.put("realname", realname);

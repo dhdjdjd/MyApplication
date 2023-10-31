@@ -35,6 +35,11 @@ public class Modifyactivity extends AppCompatActivity {
         String uid =sharedPreferences.getString("uid","");
         TextView textView1 = findViewById(R.id.text_code);
         textView1.setText(uid);
+        String personid = sharedPreferences.getString("personid","");
+        TextView textView2 = findViewById(R.id.kindcode);
+        if (!personid.isEmpty()){
+            textView2.setText(personid);
+        }
         LinearLayout linearLayout = findViewById(R.id.lin_user);
         linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override

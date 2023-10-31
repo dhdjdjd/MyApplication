@@ -10,7 +10,6 @@
         android:id="@+id/t1head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/gbule"
         app:titleTextAppearance="@style/TitleText"
         app:subtitleTextAppearance="@style/SubTitleText"
         />
@@ -180,7 +179,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
-            android:text="510***0031"
+            android:text="暂未绑定"
             android:gravity="right"
             android:textSize="20sp"
             />
