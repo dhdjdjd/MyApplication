@@ -26,11 +26,11 @@ public class activity_fradash extends AppCompatActivity implements MyViewPager.O
     private static List<Integer> sPics = new ArrayList<>();
 
     static{
-        sPics.add(R.mipmap.p1);
-        sPics.add(R.mipmap.p2);
-        sPics.add(R.mipmap.p3);
-        sPics.add(R.mipmap.p4);
-        sPics.add(R.mipmap.p5);
+        sPics.add(R.mipmap.u560);
+        sPics.add(R.mipmap.u561);
+        sPics.add(R.mipmap.u562);
+        sPics.add(R.mipmap.u563);
+        sPics.add(R.mipmap.u564);
     }
 
     private Handler handler;
@@ -67,11 +67,6 @@ public class activity_fradash extends AppCompatActivity implements MyViewPager.O
             if (!mIsTouch) {
                 //切换viewpager里面的图片到下一个
                 int currentItem = viewPager.getCurrentItem();
-                /**
-                 * 这里要注意一下，++必须放在前面
-                 * 先进行自增运算，在进行赋值。
-                 * 布尔值设置为true表示是自动切换时有滑动效果，设置为false时没有滑动效果。
-                 */
                 viewPager.setCurrentItem(++currentItem,true);
                 //设置时间
             }

@@ -3,15 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="360dp"
-    android:layout_height="200dp"
-    android:background="@color/grey"
+    android:layout_height="800dp"
+    android:background="@color/white"
     tools:context=".activity_fradash">
 
     <com.example.myapplication.Util.MyViewPager
         android:id="@+id/content_pager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingClass,MissingConstraints" />
+        android:layout_width="360dp"
+        android:layout_height="197dp"
+        tools:ignore="MissingClass,MissingConstraints"
+        android:layout_marginLeft="5dp"/>
 
     <LinearLayout
         android:id="@+id/points_container"
@@ -19,8 +20,9 @@
         android:layout_height="15dp"
         android:gravity="center"
         android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0px">
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="580px">
 
     </LinearLayout>
 

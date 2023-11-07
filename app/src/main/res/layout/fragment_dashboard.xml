@@ -2,319 +2,282 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="360dp"
+    android:layout_height="800dp"
+    android:background="@color/white"
     tools:context=".Util.ui.dashboard.DashboardFragment">
 
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/t1head"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/gbule"
-        app:titleTextAppearance="@style/TitleText"
-        app:subtitleTextAppearance="@style/SubTitleText"
-        />
 
-    <TextView
-        android:id="@+id/text_zhong"
+    <RelativeLayout
+        android:id="@+id/v_01"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/t1head"
-        android:text="重磅推荐"
-        android:textColor="@color/black"
-        android:layout_marginLeft="10dp"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"/>
+        android:layout_height="250dp"
+        android:background="@drawable/color2" >
 
-    <LinearLayout
-        android:id="@+id/lin_zhong"
-        android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:orientation="horizontal"
-        android:layout_below="@+id/text_zhong">
+        <androidx.appcompat.widget.Toolbar
+       android:id="@+id/t1head"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:titleTextAppearance="@style/TitleText"
+       app:subtitleTextAppearance="@style/SubTitleText"
+       />
+        <TextView
+            android:id="@+id/t_03"
+            android:layout_below="@+id/t1head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="         重磅推荐"
+            android:textColor="#555555"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
+        <View
+        android:id="@+id/v_02"
+        android:layout_width="38dp"
+        android:layout_height="32dp"
+        android:layout_alignTop="@+id/t_03"
+        android:background="#005A80" />
+
+        <com.example.myapplication.Util.MyViewPager
+            android:id="@+id/content_pager"
+            android:layout_width="360dp"
+            android:layout_height="197dp"
+            tools:ignore="MissingClass,MissingConstraints"
+            android:layout_below="@+id/v_02"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>
 
         <LinearLayout
-            android:id="@+id/lin_achievement"
-            android:layout_marginTop="10dp"
-            android:layout_width="0dp"
-            android:layout_height="210dp"
-            android:background="@drawable/butss_bc4"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            >
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:text="#成就中心"
-                android:background="@drawable/border"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/gbule"/>
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="升级成就领好券"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
-                android:textSize="20sp"/>
-            <TextView
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:text="解锁专属特权"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:orientation="horizontal">
-
-                <Button
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    android:text="点此进入"
-                    android:textSize="10sp"/>
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/ach"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginTop="10dp"
-                    />
-
-
-            </LinearLayout>
-
-
-
+            android:id="@+id/points_container"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="680px">
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/lin_money"
-            android:layout_marginTop="10dp"
-            android:layout_width="0dp"
-            android:layout_height="210dp"
-            android:layout_marginLeft="7dp"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:background="@drawable/butss_bc4"
-            >
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:text="#提升额度"
-                android:background="@drawable/border"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/gbule"/>
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="天天攒提升额度"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
-                android:textSize="20sp"/>
-            <TextView
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:text="更多金额等你"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:orientation="horizontal">
-
-                <Button
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
-                    android:text="点此进入"
-                    android:textSize="10sp"/>
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="130dp"
-                    android:src="@drawable/improve"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginTop="0dp"
-                    />
-
-
-            </LinearLayout>
+    </RelativeLayout>
 
 
 
 
-        </LinearLayout>
 
-    </LinearLayout>
+
+    <View
+        android:id="@+id/v_03"
+        android:layout_below="@id/v_01"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="270dp"
+        android:layout_width="38dp"
+        android:layout_height="32dp"
+        android:background="#005A80" />
 
     <TextView
-        android:id="@+id/sqzq"
+        android:id="@+id/t_04"
+        android:layout_below="@+id/v_01"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_below="@+id/lin_zhong"
-        android:text="赚钱省钱专区"
+        android:layout_height="wrap_content"
+        android:text="         赚钱省钱专区"
+        android:textColor="#555555"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="270dp"/>
+
+    <View
+        android:id="@+id/v_04"
+        android:layout_below="@id/v_03"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="490dp"
+        android:layout_width="38dp"
+        android:layout_height="32dp"
+        android:background="#005A80" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:layout_below="@id/t_04"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/v_05"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:src="@drawable/pic_07"
+                android:scaleType="fitXY"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="省心加油"
+                android:textColor="@color/white"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="60dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                />
+
+            <ImageView
+                android:id="@+id/v_06"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:src="@drawable/pic_09"
+                android:scaleType="fitXY"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"/>
+
+            <ImageView
+                android:id="@+id/v_07"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:src="@drawable/pic_08"
+                android:layout_marginLeft="15dp"
+                android:scaleType="fitXY"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"/>
+
+            <ImageView
+                android:id="@+id/v_08"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:src="@drawable/pic_10"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="15dp"/>
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/t_05"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t_04"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="490dp"
+        android:text="         更多服务"
+        android:textColor="#555555"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/v_09"
+        android:layout_below="@id/v_04"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/pic_03"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/t_07"
+        android:layout_below="@+id/t_05"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="免押租机"
         android:textColor="@color/black"
-        android:textSize="20sp"
-        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:gravity="center_vertical|left"
+
+        android:layout_toRightOf="@+id/v_09"
+        android:layout_alignTop="@+id/v_09"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         />
 
-    <LinearLayout
-        android:id="@+id/lin_sqzq1"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/sqzq">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:background="@drawable/shape_rect_white"
-            android:layout_marginLeft="10dp"
-            android:drawableLeft="@drawable/caroil"
-            android:text="省心加油      "
-            android:textSize="16sp"
-            android:paddingLeft="20dp"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:background="@drawable/shape_rect_white"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:drawableLeft="@drawable/blind_box"
-            android:text="盲盒抽奖      "
-            android:textSize="16sp"
-            android:paddingLeft="20dp"
-            android:layout_weight="1"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/lin_sqzq2"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:orientation="horizontal"
-        android:layout_below="@+id/lin_sqzq1">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:background="@drawable/shape_rect_white"
-            android:layout_marginLeft="10dp"
-            android:drawableLeft="@drawable/__1billion"
-            android:text="百亿补贴        "
-            android:textSize="16sp"
-            android:paddingLeft="13dp"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:background="@drawable/shape_rect_white"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:drawableLeft="@drawable/secondkill"
-            android:text="限时秒杀      "
-            android:textSize="16sp"
-            android:paddingLeft="20dp"
-            android:layout_weight="1"/>
-
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/v_10"
+        android:layout_below="@+id/v_09"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/pic_04"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"/>
 
     <TextView
-        android:id="@+id/gdfw"
+        android:id="@+id/t_08"
+        android:layout_below="@id/t_07"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/lin_sqzq2"
-        android:text="更多服务"
-        android:textSize="20sp"
+        android:layout_height="25dp"
+        android:gravity="center_vertical|left"
         android:textColor="@color/black"
-        android:layout_marginLeft="10dp"/>
+        android:text="外卖折扣"
+        android:layout_marginTop="10dp"
+        android:layout_alignTop="@+id/v_10"
+        android:layout_toRightOf="@+id/v_10"
+        android:textSize="18sp"
+        android:layout_marginLeft="22dp"/>
 
-    <LinearLayout
-        android:id="@+id/lin_gdfw1"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:orientation="horizontal"
-        android:layout_below="@+id/gdfw">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:background="@drawable/shape_rect_white"
-            android:layout_marginLeft="10dp"
-            android:drawableLeft="@drawable/phone1"
-            android:text="免押租机      "
-            android:textSize="16sp"
-            android:paddingLeft="20dp"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:background="@drawable/shape_rect_white"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:drawableLeft="@drawable/takeawy"
-            android:text="外卖折扣      "
-            android:textSize="16sp"
-            android:paddingLeft="20dp"
-            android:layout_weight="1"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/lin_gdfw2"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:orientation="horizontal"
-        android:layout_below="@+id/lin_gdfw1">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:background="@drawable/shape_rect_white"
-            android:layout_marginLeft="10dp"
-            android:drawableLeft="@drawable/credits"
-            android:text="办信用卡      "
-            android:textSize="16sp"
-            android:paddingLeft="20dp"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:background="@drawable/shape_rect_white"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:drawableLeft="@drawable/living"
-            android:text="生活缴费      "
-            android:textSize="16sp"
-            android:paddingLeft="20dp"
-            android:layout_weight="1"/>
-
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/v_11"
+        android:layout_below="@+id/v_10"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/pic_05"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"/>
 
     <TextView
+        android:id="@+id/t_09"
+        android:layout_below="@id/t_08"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lin_gdfw2"
-        android:text="更多服务福利请关注微信公众号"
-        android:textSize="16sp"
-        android:gravity="center"/>
+        android:layout_height="25dp"
+        android:text="办信用卡"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/v_11"
+        android:gravity="center_vertical|left"
+        android:layout_alignTop="@+id/v_11"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="22dp"/>
+
+    <ImageView
+        android:id="@+id/v_12"
+        android:layout_below="@id/v_11"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/pic_06"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/t_10"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@id/t_09"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/v_12"
+        android:gravity="center_vertical|left"
+        android:layout_marginTop="10dp"
+        android:layout_alignTop="@+id/v_12"
+        android:text="生活缴费"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+
 
 
 
