@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +35,7 @@ public class HomeFragment extends Fragment {
     private Button BUT_2;
     private Button BUT_3;
     private Button BUT_4;
+    private TextView te7;
     protected AppCompatActivity mActivity;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -83,6 +85,16 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        te7= root.findViewById(R.id.te7);
+        te7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), AnHome2Activity.class);
+                startActivity(intent);
+            }
+        });
+
         /*
         but_ss5=root.findViewById(R.id.but_ss5);
         but_ss5.setOnClickListener(new View.OnClickListener() {
