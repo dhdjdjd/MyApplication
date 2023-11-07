@@ -172,9 +172,11 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
         android:translationZ="0dp"
-        android:text="填写数字，金额应当在0~20000之间"
+        android:text=""
+        android:paddingLeft="5dp"
+        android:hint="填写数字，金额应当在0~20000之间"
         android:textSize="12dp"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:background="@drawable/editext_selector"
         />
 
@@ -203,10 +205,12 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="0dp"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:translationZ="0dp"
         android:background="@drawable/editext_selector"
-        android:text="零壹贰叁肆伍陆柒捌玖拾佰仟万"
+        android:text=""
+        android:paddingLeft="5dp"
+        android:hint="零壹贰叁肆伍陆柒捌玖拾佰仟万"
         android:textSize="12dp"
         />
 
@@ -281,11 +285,10 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="580dp"
         android:layout_marginEnd="40dp"
-        android:translationZ="25dp"
-        android:stateListAnimator="@null"
         android:background="@drawable/butss_bc3"
         android:text="提     交"
         android:textSize="16dp"
+        android:textColor="@color/white"
         />
 
 

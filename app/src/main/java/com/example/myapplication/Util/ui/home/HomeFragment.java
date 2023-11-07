@@ -74,7 +74,8 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
-        btn_bow=root.findViewById(R.id.but_bow);
+        */
+        btn_bow=root.findViewById(R.id.v_besf);
         btn_bow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +83,7 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        /*
         but_ss5=root.findViewById(R.id.but_ss5);
         but_ss5.setOnClickListener(new View.OnClickListener() {
             @Override

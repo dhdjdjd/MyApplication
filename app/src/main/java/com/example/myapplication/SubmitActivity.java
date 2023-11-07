@@ -146,7 +146,7 @@ public class SubmitActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.et_ssb3:{
-                subMonth = showDatePickerDialog(this,  4, but_ssb3, calendar);
+                subMonth = showDatePickerDialog(this,  5, but_ssb3, calendar);
                 break;
             }
             case R.id.but_llc2:{
@@ -156,7 +156,7 @@ public class SubmitActivity extends AppCompatActivity implements View.OnClickLis
                 builder.setTitle("选择证件类型");
                 // 设置内容,
                 final String[] cities = {"中国居民身份证", "护照", "港澳通行证"};
-                builder.setSingleChoiceItems(cities, 0, new DialogInterface.OnClickListener() {
+                builder.setSingleChoiceItems(cities, 2, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // 传出数据？？？
