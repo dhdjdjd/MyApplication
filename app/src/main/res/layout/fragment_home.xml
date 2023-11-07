@@ -113,7 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="特色功能"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:layout_toRightOf="@+id/suqre"
         android:layout_alignTop="@+id/suqre"
         android:textColor="@color/black"
