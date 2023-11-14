@@ -184,23 +184,25 @@ public class SubmitActivity extends AppCompatActivity implements View.OnClickLis
                 builder.create().show();
                 break;
             }
-            case R.id.but_ssb1:
-                String money = et_ssb1.getText().toString();
+            case R.id.but_ssb1: {
+                startActivity(new Intent(mContext, BorrowMidActivity.class));
+                //发送消息
+                /**String money = et_ssb1.getText().toString();
                 String Lmoney = et_ssb2.getText().toString();
                 //String Btime = but_ssb3.getText().toString();
                 int Nmoney = Integer.parseInt(money);
-                int Ntime = subMonth;/*Integer.parseInt(Btime);*/
+                int Ntime = subMonth;*//*Integer.parseInt(Btime);*//*
                 String tmpLmoney = "";
-                if (Nmoney <= 0 || Nmoney > 20000 || Ntime <= 0 || Ntime >24) {
+                if (Nmoney <= 0 || Nmoney > 20000 || Ntime <= 0 || Ntime > 24) {
                     Toast.makeText(mContext, "请输入正确金额或时间", Toast.LENGTH_SHORT).show();
                 } else {
-                    if (Objects.equals(Lmoney, NumTtanUtil.getChineseNumber(money)) ) {
+                    if (Objects.equals(Lmoney, NumTtanUtil.getChineseNumber(money))) {
                         Toast.makeText(mContext, "大写金额与小写金额不匹配", Toast.LENGTH_SHORT).show();
-                    }else {
+                    } else {
                         String jsonString = "";
                         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-                        Date curDate =  new Date(System.currentTimeMillis());
-                        String nowtime =  formatter.format(curDate);
+                        Date curDate = new Date(System.currentTimeMillis());
+                        String nowtime = formatter.format(curDate);
                         String projectid = "P0000001";
                         try {
                             JSONObject jsonObject = new JSONObject();
@@ -215,19 +217,19 @@ public class SubmitActivity extends AppCompatActivity implements View.OnClickLis
                             e.printStackTrace();
                         }
                         System.out.println(jsonString);
-                        String pram = "?RealId=" + personid + "&RealName=" + realname + "&Projectid=" + projectid + "&Money=" +money + "&BTime=" + Ntime +"&NowTime=" + nowtime;
+                        String pram = "?RealId=" + personid + "&RealName=" + realname + "&Projectid=" + projectid + "&Money=" + money + "&BTime=" + Ntime + "&NowTime=" + nowtime;
                         // 创建一个POST方式的请求结构
                         System.out.println(pram);
                         RequestBody body = RequestBody.create(jsonString, MediaType.parse("application/json"));
                         OkHttpClient client = new OkHttpClient(); // 创建一个okhttp客户端对象
-                        Request request = new Request.Builder().post(body).url("http://172.20.10.5:8880/business/bus"+pram).build();
+                        Request request = new Request.Builder().post(body).url("http://172.20.10.5:8880/business/bus" + pram).build();
                         Call call = client.newCall(request); // 根据请求结构创建调用对象
                         // 加入HTTP请求队列。异步调用，并设置接口应答的回调方法
                         call.enqueue(new Callback() {
                             @Override
                             public void onFailure(Call call, IOException e) { // 请求失败
                                 // 回到主线程操纵界面
-                                runOnUiThread(() -> Toast.makeText(SubmitActivity.this, "调用HTTP接口报错："+e.getMessage(), Toast.LENGTH_SHORT).show());
+                                runOnUiThread(() -> Toast.makeText(SubmitActivity.this, "调用HTTP接口报错：" + e.getMessage(), Toast.LENGTH_SHORT).show());
                                 //tv_result.setText("调用登录接口报错："+e.getMessage()));
                             }
 
@@ -236,15 +238,16 @@ public class SubmitActivity extends AppCompatActivity implements View.OnClickLis
                                 String resp = response.body().string();
                                 // 回到主线程操纵界面
                                 runOnUiThread(() -> {
-                                    Toast.makeText(SubmitActivity.this, "调用HTTP接口返回：\n"+resp, Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(mContext,BorrowMidActivity.class));
+                                    Toast.makeText(SubmitActivity.this, "调用HTTP接口返回：\n" + resp, Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(mContext, BorrowMidActivity.class));
                                 });
 
                                 //tv_result.setText("调用登录接口返回：\n"+resp));
                             }
                         });
                     }
-                }
+                }*/
+            }
 
         }
     }

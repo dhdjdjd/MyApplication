@@ -280,8 +280,8 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-50dp"
-        android:text="贷前信用\n资产状况"
+        android:layout_marginBottom="-55dp"
+        android:text="健康状况\n资产估计"
         android:textSize="14dp"
         android:textColor="@color/black"/>
 

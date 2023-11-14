@@ -304,6 +304,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/rLayout"
         android:layout_width="295dp"
         android:layout_height="80dp"
         android:layout_below="@+id/activity"

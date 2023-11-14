@@ -16,6 +16,311 @@
         app:titleTextColor="@color/black" />
 
     <View
+        android:id="@+id/ve_ssb1"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/line4"
+        android:translationZ="25dp"
+        android:outlineAmbientShadowColor="#B309101D"
+        />
+
+    <TextView
+        android:id="@+id/tv_ssb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_ssb2"
+        android:layout_alignTop="@+id/ve_ssb2"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="贷中信用等级评估"
+        android:translationZ="25dp"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/tv_bmt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_ssb1"
+        android:layout_alignTop="@+id/ve_ssb1"
+        android:layout_alignEnd="@+id/ve_ssb1"
+        android:layout_alignBottom="@+id/ve_ssb1"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="100dp"
+        android:text="正常"
+        android:translationZ="30dp"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:paddingTop="5dp"
+        android:textColor="@color/gbule"
+        android:textStyle="bold"
+        android:shadowRadius="3.0"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowColor="#B309101D"
+        />
+
+    <TextView
+        android:id="@+id/tv_ssb3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_ssb1"
+        android:layout_alignTop="@+id/tv_ssb1"
+        android:layout_alignEnd="@+id/ve_ssb2"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="您的贷中信用等级良好，继续保持合规的通信行为、干净的应用列表和安全的出行范围，可以保持等级正常。"
+        android:textColor="#A4A4A5"
+        android:textSize="11dp"
+        android:translationZ="25dp" />
+
+    <View
+        android:id="@+id/ve_ssb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_ssb1"
+        android:layout_alignTop="@+id/ve_ssb1"
+        android:layout_alignEnd="@+id/ve_ssb1"
+        android:layout_alignBottom="@+id/ve_ssb1"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginBottom="-250dp"
+        android:background="@drawable/shape_rect_white2"
+        android:translationZ="0dp"
+        android:outlineAmbientShadowColor="#B309101D"
+        />
+
+
+    <!--<EditText
+        android:id="@+id/et_ssb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_ssb2"
+        android:layout_alignTop="@+id/ve_ssb2"
+        android:layout_alignEnd="@+id/ve_ssb2"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="9dp"
+        android:textAlignment="textEnd"
+        android:translationZ="25dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/et_ssb1"
+        android:layout_alignEnd="@+id/et_ssb1"
+        android:layout_alignBottom="@+id/et_ssb1"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="192dp"
+        android:layout_marginBottom="0dp"
+        android:text="借款金额（元）"
+        android:translationZ="25dp"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/et_ssb1"
+        android:layout_alignTop="@+id/et_ssb1"
+        android:layout_alignEnd="@+id/et_ssb1"
+        android:layout_alignBottom="@+id/et_ssb1"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-15dp"
+        android:text="填写数字，金额应当在0~20000之间"
+        android:translationZ="25dp"
+        android:textSize="12dp"
+        android:textAlignment="textEnd"
+        />
+
+    <EditText
+        android:id="@+id/et_ssb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/et_ssb1"
+        android:layout_alignTop="@+id/et_ssb1"
+        android:layout_alignEnd="@+id/et_ssb1"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="0dp"
+        android:textAlignment="textEnd"
+        android:translationZ="25dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/et_ssb2"
+        android:layout_alignEnd="@+id/et_ssb2"
+        android:layout_alignBottom="@+id/et_ssb2"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="192dp"
+        android:layout_marginBottom="0dp"
+        android:text="大写金额（元）"
+        android:translationZ="25dp"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/et_ssb2"
+        android:layout_alignTop="@+id/et_ssb2"
+        android:layout_alignEnd="@+id/et_ssb2"
+        android:layout_alignBottom="@+id/et_ssb2"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-15dp"
+        android:text="零壹贰叁肆伍陆柒捌玖拾佰仟万（包括圆整）"
+        android:translationZ="25dp"
+        android:textSize="12dp"
+        android:textAlignment="textEnd"
+        />
+
+    <EditText
+        android:id="@+id/et_ssb3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/et_ssb2"
+        android:layout_alignTop="@+id/et_ssb2"
+        android:layout_alignEnd="@+id/et_ssb2"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="0dp"
+        android:textAlignment="textEnd"
+        android:translationZ="25dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/et_ssb3"
+        android:layout_alignEnd="@+id/et_ssb3"
+        android:layout_alignBottom="@+id/et_ssb3"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="192dp"
+        android:layout_marginBottom="0dp"
+        android:text="贷款时间（月）"
+        android:translationZ="25dp"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/et_ssb3"
+        android:layout_alignTop="@+id/et_ssb3"
+        android:layout_alignEnd="@+id/et_ssb3"
+        android:layout_alignBottom="@+id/et_ssb3"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-15dp"
+        android:text="填写月份数字即可，小于24即可"
+        android:translationZ="25dp"
+        android:textSize="12dp"
+        android:textAlignment="textEnd"
+        />-->
+
+    <com.github.mikephil.charting.charts.RadarChart
+        android:id="@+id/bmt_radar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_ssb1"
+        android:layout_alignTop="@+id/ve_ssb1"
+        android:layout_alignEnd="@+id/ve_ssb1"
+        android:layout_alignBottom="@+id/ve_ssb1"
+        android:layout_marginStart="-30dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginEnd="-30dp"
+        android:layout_marginBottom="-30dp"
+        android:translationZ="25dp" />
+
+    <TextView
+        android:id="@+id/tv_ssb4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_ssb3"
+        android:layout_alignStart="@+id/tv_ssb3"
+        android:layout_alignEnd="@+id/tv_ssb3"
+        android:layout_alignBottom="@+id/tv_ssb3"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-30dp"
+        android:text="信用等级存在如下优势："
+        android:textSize="13dp"/>
+
+    <TextView
+        android:id="@+id/tv_ssb5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_ssb4"
+        android:layout_alignStart="@+id/tv_ssb4"
+        android:layout_alignEnd="@+id/tv_ssb4"
+        android:layout_alignBottom="@+id/tv_ssb4"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-55dp"
+        android:text="应用列表\n通话记录"
+        android:textSize="14dp"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignTop="@+id/tv_ssb5"
+        android:layout_alignEnd="@+id/tv_ssb5"
+        android:layout_marginEnd="140dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/uppoint" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignBottom="@+id/tv_ssb5"
+        android:layout_alignEnd="@+id/tv_ssb5"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/uppoint" />
+
+
+    <Button
+        android:id="@+id/but_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_ssb2"
+        android:layout_alignTop="@+id/ve_ssb2"
+        android:layout_alignEnd="@+id/ve_ssb2"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/butss_bc3"
+        android:text="继     续"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        />
+
+    <!--<View
         android:id="@+id/ve_bmt1"
         android:layout_width="wrap_content"
         android:layout_height="600dp"
@@ -80,24 +385,8 @@
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="-250dp"
         android:translationZ="25dp"
-        app:srcCompat="@drawable/bmtpic1" />
+        app:srcCompat="@drawable/bmtpic1" />-->
 
-    <Button
-        android:id="@+id/btn_return"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/ve_bmt1"
-        android:layout_alignTop="@+id/imageView"
-        android:layout_alignEnd="@+id/ve_bmt1"
-        android:layout_alignBottom="@+id/imageView"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="270dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="-90dp"
-        android:translationZ="25dp"
-        android:stateListAnimator="@null"
-        android:text="返回主页"
-        android:background="@drawable/butss_bc"
-        />
+
 
 </RelativeLayout>

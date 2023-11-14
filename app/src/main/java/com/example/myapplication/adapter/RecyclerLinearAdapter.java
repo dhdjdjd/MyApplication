@@ -79,7 +79,8 @@ public class RecyclerLinearAdapter extends RecyclerView.Adapter<ViewHolder> {
                     default:
                         Intent intentn = new Intent(mContext, LowCashActivity.class);
                         Bundle bundlen = new Bundle();
-                        bundlen.putString("BType","Others");
+                        //bundlen.putString("BType","Others");
+                        bundlen.putString("BType","CashBorrow");
                         intentn.putExtras(bundlen);
                         mContext.startActivity(intentn);
                         break;

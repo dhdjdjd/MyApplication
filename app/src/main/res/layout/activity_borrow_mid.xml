@@ -16,7 +16,223 @@
         android:background="#F3F3F3"
         />
 
+    <TextView
+        android:id="@+id/tv_ah11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_ah11"
+        android:layout_alignEnd="@+id/ve_ah11"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="0dp"
+        android:text="信息监控"
+        android:textSize="32dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_ah11"
+        android:layout_alignTop="@+id/tv_ah11"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="45dp"
+        android:text="贷款之后本APP将对您的行为进行监控"/>
+
     <View
+        android:id="@+id/ve_ah11"
+        android:layout_width="wrap_content"
+        android:layout_height="550dp"
+        android:layout_alignTop="@+id/tv_ah11"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/shape_rect_white2"
+        android:outlineAmbientShadowColor="#B309101D" />
+
+    <TextView
+        android:id="@+id/tv_ah1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_ah11"
+        android:layout_alignTop="@+id/ve_ah11"
+        android:layout_alignEnd="@+id/ve_ah11"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:text="要对哪些方面进行监控"
+        android:textAlignment="center"
+        android:translationZ="25dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_ah1"
+        android:layout_alignEnd="@id/tv_ah1"
+        android:layout_alignStart="@id/tv_ah1"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:text="了解角度 保持信用"
+        android:textAlignment="center"
+        android:textSize="13dp"/>
+
+    <View
+        android:id="@+id/ve_ah12"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_alignTop="@+id/ve_ah11"
+        android:layout_alignEnd="@id/ve_ah11"
+        android:layout_alignStart="@id/ve_ah11"
+        android:layout_marginTop="110dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/ve_bg1"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_ah2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_ah12"
+        android:layout_alignTop="@+id/ve_ah12"
+        android:layout_alignEnd="@+id/ve_ah12"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="地理位置：最近地理位置变化"
+        android:translationZ="25dp"
+        android:textSize="16dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_ah3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_ah2"
+        android:layout_alignTop="@+id/tv_ah2"
+        android:layout_alignEnd="@+id/tv_ah2"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="0dp"
+        android:text="借款人地理位置不应出现多次频繁的长距离变化，如果地理位置出现异常，我们可能要求提前还款"
+        android:translationZ="25dp"
+        android:textSize="14dp"
+        />
+
+    <View
+        android:id="@+id/img_ah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_ah12"
+        android:layout_alignTop="@+id/ve_ah12"
+        android:layout_alignEnd="@+id/ve_ah12"
+        android:layout_alignBottom="@+id/ve_ah12"
+        android:layout_marginBottom="-200dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/ve_bg2"
+        />
+
+    <TextView
+        android:id="@+id/tv_ah4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/img_ah"
+        android:layout_alignTop="@+id/img_ah"
+        android:layout_alignEnd="@+id/img_ah"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="设备记录：通信信息和应用列表"
+        android:textSize="16dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_ah5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_ah4"
+        android:layout_alignTop="@+id/tv_ah4"
+        android:layout_alignEnd="@+id/tv_ah4"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="0dp"
+        android:text="本APP将会读取您的设备中的通信信息，包括通讯录与通话记录等"
+        android:translationZ="25dp"
+        android:textSize="14dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_ah5"
+        android:layout_alignTop="@+id/tv_ah5"
+        android:layout_alignEnd="@+id/tv_ah5"
+        android:layout_alignBottom="@+id/tv_ah5"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/ahpic13"
+        />
+
+    <TextView
+        android:id="@+id/tv_ah6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_ah5"
+        android:layout_alignTop="@+id/tv_ah5"
+        android:layout_alignEnd="@+id/tv_ah5"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="0dp"
+        android:text="对于您设备中的应用列表将会进行读取，不安全的应用可能降低您的评级，提早还款期限"
+        android:translationZ="25dp"
+        android:textSize="14dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_ah6"
+        android:layout_alignTop="@+id/tv_ah6"
+        android:layout_alignEnd="@+id/tv_ah6"
+        android:layout_alignBottom="@+id/tv_ah6"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/ahpic14"
+        />
+
+
+    <Button
+        android:id="@+id/but_bm1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_ah"
+        android:layout_alignStart="@+id/ve_ah11"
+        android:layout_alignEnd="@+id/ve_ah11"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/butss_bc3"
+        android:textColor="@color/white"
+        android:text="我了解了"
+        android:textSize="16dp"
+
+        />
+
+    <!--<View
         android:id="@+id/ve_bmb1"
         android:layout_width="wrap_content"
         android:layout_height="600dp"
@@ -154,6 +370,6 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="0dp"
-        />
+        />-->
 
 </RelativeLayout>

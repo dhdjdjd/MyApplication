@@ -123,6 +123,11 @@ public class LowCashActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             }
             case R.id.but_lcc1:
+                if (PemUtil.checkPermission(LowCashActivity.this, PERMISSIONS, 1)) {
+                    Intent sintent = new Intent(mContext, SuccessScoreActivity.class);
+                    startActivity(sintent);
+                }
+                /**
                 realname = et_lcce.getText().toString();
                 personid = et_lcce2.getText().toString();
                 if(cb_lcc1.isChecked() != true){
@@ -231,7 +236,7 @@ public class LowCashActivity extends AppCompatActivity implements View.OnClickLi
 
                     }
                 }
-                break;
+                break;*/
 
         }
     }

@@ -128,7 +128,8 @@ public class SuccessScoreActivity extends AppCompatActivity implements View.OnCl
 
 
         RadarDataSet radarDataSet=new RadarDataSet(list,"男性");
-        radarDataSet.setColor(ContextCompat.getColor(this, R.color.pink));
+        //radarDataSet.setColor(ContextCompat.getColor(this, R.color.pink));
+        radarDataSet.setDrawFilled(true);
         RadarData radarData=new RadarData(radarDataSet);
         radar.setData(radarData);
 
@@ -170,13 +171,13 @@ public class SuccessScoreActivity extends AppCompatActivity implements View.OnCl
 
 
         //是否绘制雷达框上对每个点的数据的标注    和Y轴坐标点一般不同时存在 否则显得很挤  默认为true
-        radarDataSet.setDrawValues(false);
-        radarDataSet.setValueTextSize(8);  //数据值得字体大小（这里只是写在这）
-        radarDataSet.setValueTextColor(Color.CYAN);//数据值得字体颜色（这里只是写在这）
+        radarDataSet.setDrawValues(true);
+        radarDataSet.setValueTextSize(10);  //数据值得字体大小（这里只是写在这）
+        radarDataSet.setValueTextColor(ContextCompat.getColor(this, R.color.pink));//数据值得字体颜色（这里只是写在这）
 
         YAxis yAxis=radar.getYAxis();
         //是否绘制Y轴坐标点  和雷达框数据一般不同时存在 否则显得很挤 默认为true
-        yAxis.setDrawLabels(true);
+        yAxis.setDrawLabels(false);
         yAxis.setTextColor(Color.GRAY);//Y轴坐标数据的颜色
         yAxis.setAxisMaximum(50);   //Y轴最大数值
         yAxis.setAxisMinimum(0);   //Y轴最小数值

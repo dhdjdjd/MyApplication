@@ -100,13 +100,13 @@ public class BorrowMidActivity extends AppCompatActivity implements View.OnClick
         //tv_location = findViewById(R.id.tv_location);
         SwitchUtil.checkLocationIsOpen(this, "需要打开定位功能才能查看定位信息");
 
-        callLogRecords = CommunicationUtil.getDataList(this);
+        //callLogRecords = CommunicationUtil.getDataList(this);
         appList = CommunicationUtil.getAllAppInfo(this, false);
-        contactList = CommunicationUtil.readAllContacts(getContentResolver());
+        //contactList = CommunicationUtil.readAllContacts(getContentResolver());
         mHandler.removeCallbacks(mRefresh); // 移除定位刷新任务
         initLocation(); // 初始化定位服务
         //mHandler.postDelayed(mRefresh, 100); // 延迟100毫秒启动定位刷新任务
-        for(CallLogRecord callLogRecord : callLogRecords){
+        /*for(CallLogRecord callLogRecord : callLogRecords){
 
             String str = callLogRecord.GfromLoc;
             System.out.println(str);
@@ -116,9 +116,9 @@ public class BorrowMidActivity extends AppCompatActivity implements View.OnClick
                 calllogNum += matchStringByIndexOf(str, "土耳其");
                 calllogNum += matchStringByIndexOf(str, "新加坡");
                 calllogNum += matchStringByIndexOf(str, "澳门");
-                /*if (tmp <= 0) {
+                *//*if (tmp <= 0) {
                     calllogNum++;
-                }*/
+                }*//*
                 //calllogNum += matchStringByIndexOf(str, "未知");
             }
             else {
@@ -131,7 +131,7 @@ public class BorrowMidActivity extends AppCompatActivity implements View.OnClick
             if(str != null) {
                 contactNum += matchStringByIndexOf(str, "贷");
             }
-        }
+        }*/
 
         for(AppInfo appInfo : appList){
             String str = appInfo.package_name;
@@ -267,6 +267,11 @@ public class BorrowMidActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.but_bm1:{
+                Intent intent = new Intent(mContext, Fragement_activity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                //发送消息
+                /**
                 String jsonString = "";
                 SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
                 Date curDate =  new Date(System.currentTimeMillis());
@@ -313,7 +318,7 @@ public class BorrowMidActivity extends AppCompatActivity implements View.OnClick
                         // 回到主线程操纵界面
                         runOnUiThread(() -> {
                             Toast.makeText(BorrowMidActivity.this, "调用HTTP接口返回：\n"+resp, Toast.LENGTH_SHORT).show();
-                            /*startActivity(new Intent(mContext,Fragement_activity.class));*/
+                            //startActivity(new Intent(mContext,Fragement_activity.class));
                             Intent intent = new Intent(mContext, Fragement_activity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
@@ -321,8 +326,9 @@ public class BorrowMidActivity extends AppCompatActivity implements View.OnClick
 
                         //tv_result.setText("调用登录接口返回：\n"+resp));
                     }
-                });
+                });*/
             }
+
         }
     }
 }
