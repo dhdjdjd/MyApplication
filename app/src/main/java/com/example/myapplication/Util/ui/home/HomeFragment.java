@@ -9,7 +9,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,7 +28,6 @@ import com.example.myapplication.R;
 public class HomeFragment extends Fragment {
 
     private Button btn_bow;
-    private RelativeLayout chat;
     private Button but_ss5;
     private Button but_ss6;
     private Button BUT_1;
@@ -95,6 +93,16 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        te7= root.findViewById(R.id.te7);
+        te7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), AnHome2Activity.class);
+                startActivity(intent);
+            }
+        });
+
         /*
         but_ss5=root.findViewById(R.id.but_ss5);
         but_ss5.setOnClickListener(new View.OnClickListener() {

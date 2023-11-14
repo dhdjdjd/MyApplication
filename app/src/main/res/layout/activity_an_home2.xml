@@ -44,17 +44,15 @@
     <View
         android:id="@+id/ve_ah11"
         android:layout_width="wrap_content"
-        android:layout_height="600dp"
-        android:layout_alignParentStart="true"
+        android:layout_height="560dp"
         android:layout_alignTop="@+id/tv_ah11"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="99dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/shape_rect_white2"
-        android:translationZ="25dp"
-        android:outlineAmbientShadowColor="#B309101D"
-        />
+        android:outlineAmbientShadowColor="#B309101D" />
 
     <TextView
         android:id="@+id/tv_ah1"
@@ -63,29 +61,53 @@
         android:layout_alignStart="@+id/ve_ah11"
         android:layout_alignTop="@+id/ve_ah11"
         android:layout_alignEnd="@+id/ve_ah11"
-        android:layout_alignBottom="@+id/ve_ah11"
         android:layout_marginStart="30dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="500dp"
-        android:text="如果您想借钱，则应该具备以下条件："
+        android:text="借款有哪些申请条件"
+        android:textAlignment="center"
         android:translationZ="25dp"
-        android:textSize="20dp"
+        android:textSize="22dp"
         android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_ah1"
+        android:layout_alignEnd="@id/tv_ah1"
+        android:layout_alignStart="@id/tv_ah1"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:text="匹配条件 轻松入门"
+        android:textAlignment="center"
+        android:textSize="15dp"/>
+
+    <View
+        android:id="@+id/ve_ah12"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_alignTop="@+id/ve_ah11"
+        android:layout_alignEnd="@id/ve_ah11"
+        android:layout_alignStart="@id/ve_ah11"
+        android:layout_marginTop="110dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/ve_bg1"/>
+
+
 
     <TextView
         android:id="@+id/tv_ah2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/tv_ah1"
-        android:layout_alignTop="@+id/tv_ah1"
-        android:layout_alignEnd="@+id/tv_ah1"
-        android:layout_alignBottom="@+id/tv_ah1"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-80dp"
-        android:text="1、没有不良借贷记录"
+        android:layout_alignStart="@+id/ve_ah12"
+        android:layout_alignTop="@+id/ve_ah12"
+        android:layout_alignEnd="@+id/ve_ah12"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="年龄要求：18-55周岁"
         android:translationZ="25dp"
         android:textSize="18dp"
         android:textColor="@color/black"/>
@@ -97,48 +119,101 @@
         android:layout_alignStart="@+id/tv_ah2"
         android:layout_alignTop="@+id/tv_ah2"
         android:layout_alignEnd="@+id/tv_ah2"
-        android:layout_alignBottom="@+id/tv_ah2"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-70dp"
-        android:text="2、身份信息真实完整"
+        android:text="借款人年龄必须在18-55周岁之间，根据信贷行业监管要求，贷易控谢绝向在校大学生提供消费分期贷款，如您是在校大学生，请放弃申请"
         android:translationZ="25dp"
-        android:textSize="18dp"
-        android:textColor="@color/black"/>
+        android:textSize="14dp"
+        />
+
+    <View
+        android:id="@+id/img_ah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ve_ah12"
+        android:layout_alignTop="@+id/ve_ah12"
+        android:layout_alignEnd="@+id/ve_ah12"
+        android:layout_alignBottom="@+id/ve_ah12"
+        android:layout_marginBottom="-200dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/ve_bg2"
+        />
 
     <TextView
         android:id="@+id/tv_ah4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/tv_ah3"
-        android:layout_alignTop="@+id/tv_ah3"
-        android:layout_alignEnd="@+id/tv_ah3"
-        android:layout_alignBottom="@+id/tv_ah3"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-70dp"
-        android:text="3、资产与债务总额正常"
-        android:translationZ="25dp"
+        android:layout_alignStart="@+id/img_ah"
+        android:layout_alignTop="@+id/img_ah"
+        android:layout_alignEnd="@+id/img_ah"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:text="材料要求：身份证和银行卡"
         android:textSize="18dp"
         android:textColor="@color/black"/>
 
-    <ImageView
-        android:id="@+id/img_ah"
+    <TextView
+        android:id="@+id/tv_ah5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ahpic2"
-        android:translationZ="25dp"
         android:layout_alignStart="@+id/tv_ah4"
         android:layout_alignTop="@+id/tv_ah4"
         android:layout_alignEnd="@+id/tv_ah4"
-        android:layout_alignBottom="@+id/tv_ah4"
-        android:layout_marginBottom="-160dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="0dp"
+        android:text="需本人二代身份证原件，临时、过期、一代及翻拍身份证均不行"
+        android:translationZ="25dp"
+        android:textSize="14dp"
         />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_ah5"
+        android:layout_alignTop="@+id/tv_ah5"
+        android:layout_alignEnd="@+id/tv_ah5"
+        android:layout_alignBottom="@+id/tv_ah5"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/ahpic2"
+        />
+
+    <TextView
+        android:id="@+id/tv_ah6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_ah5"
+        android:layout_alignTop="@+id/tv_ah5"
+        android:layout_alignEnd="@+id/tv_ah5"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="0dp"
+        android:text="仅支持本人借记卡，推荐使用全国各大银行I类借记卡，地方性银行卡可能会有限制"
+        android:translationZ="25dp"
+        android:textSize="14dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_ah6"
+        android:layout_alignTop="@+id/tv_ah6"
+        android:layout_alignEnd="@+id/tv_ah6"
+        android:layout_alignBottom="@+id/tv_ah6"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/ahpic1"
+        />
+
 
     <Button
         android:id="@+id/but_ah1"
@@ -148,14 +223,13 @@
         android:layout_alignStart="@+id/ve_ah11"
         android:layout_alignEnd="@+id/ve_ah11"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="220dp"
         android:layout_marginEnd="70dp"
-        android:translationZ="25dp"
-        android:stateListAnimator="@null"
         android:background="@drawable/butss_bc3"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:text="我了解了"
         android:textSize="16dp"
+
         />
 
 </RelativeLayout>
