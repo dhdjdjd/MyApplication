@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +29,7 @@ import com.example.myapplication.R;
 public class HomeFragment extends Fragment {
 
     private Button btn_bow;
+    private RelativeLayout chat;
     private Button but_ss5;
     private Button but_ss6;
     private Button BUT_1;
@@ -75,6 +77,16 @@ public class HomeFragment extends Fragment {
             }
         });
         */
+        chat = root.findViewById(R.id.AI);
+        chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ChatBotActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         btn_bow=root.findViewById(R.id.v_besf);
         btn_bow.setOnClickListener(new View.OnClickListener() {
             @Override

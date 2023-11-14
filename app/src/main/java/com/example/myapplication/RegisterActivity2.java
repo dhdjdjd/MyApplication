@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Looper;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -34,6 +35,7 @@ public class RegisterActivity2 extends AppCompatActivity {
     private EditText mima;
     private EditText youxiang;
     private TextView tv_result;
+    private TextView have;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +43,18 @@ public class RegisterActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_register2);
 
         btn_ac=findViewById(R.id.btn_next);
+        have=findViewById(R.id.have);
         zhanghao=findViewById(R.id.ed_1);
         mima=findViewById(R.id.ed_2);
         youxiang=findViewById(R.id.ed_3);
         tv_result = findViewById(R.id.tv_result);
+        have.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        finish();
+                                    }
+                                }
+        );
         findViewById(R.id.btn_next).setOnClickListener(v -> {
             postForm();
         });

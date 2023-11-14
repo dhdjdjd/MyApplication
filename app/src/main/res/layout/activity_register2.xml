@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="360dp"
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity2">
@@ -21,7 +21,7 @@
             android:src="@drawable/____" />
 
         <TextView
-            android:layout_width="160dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:text="注册"
             android:textSize="50sp"
@@ -87,6 +87,17 @@
             android:layout_marginTop="30dp"
             android:background="@drawable/round_button"
             />
+
+    <TextView
+        android:id="@+id/have"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="已有账号，返回登录"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+
+        />
+
 
     <TextView
         android:id="@+id/tv_result"
