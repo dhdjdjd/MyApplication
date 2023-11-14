@@ -75,14 +75,6 @@ public class HomeFragment extends Fragment {
             }
         });
         */
-        chat = root.findViewById(R.id.AI);
-        chat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ChatBotActivity.class);
-                startActivity(intent);
-            }
-        });
 
 
         btn_bow=root.findViewById(R.id.v_besf);
@@ -94,14 +86,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        te7= root.findViewById(R.id.te7);
-        te7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), AnHome2Activity.class);
-                startActivity(intent);
-            }
-        });
+
 
         /*
         but_ss5=root.findViewById(R.id.but_ss5);
