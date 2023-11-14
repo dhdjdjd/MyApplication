@@ -43,307 +43,637 @@
             android:layout_y="1dp"
             android:src="@drawable/headpicture" />
 
-        <RelativeLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
             android:layout_width="300dp"
             android:layout_height="200dp"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/layout_back1"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#FFFFFF"
+            android:layout_below="@+id/avatar_image"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp">
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/layout_back1"
+                >
+
+                <TextView
+                    android:id="@+id/name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:text="最高可借额度(元)"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="200,000.00"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/v_besf"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/name2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/layout_but"
+                    android:text="我要借款"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/v_besf"
+                    android:layout_centerHorizontal="true"
+                    android:text="1千元借12个月，日费用1毛2起，年化利率(单利) 7.2%~24%"
+                    android:textSize="8sp"
+                    android:layout_marginTop="10dp"/>
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="2800dp"
+        android:layout_below="@+id/gradual">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             >
 
-            <TextView
-                android:id="@+id/name1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="25dp"
-                android:text="最高可借额度(元)"
-                android:textSize="28sp"
-                android:textStyle="bold" />
+            <View
+                android:id="@+id/suqre"
+                android:layout_width="38dp"
+                android:layout_height="32dp"
+
+                android:layout_marginTop="15dp"
+                android:background="#005A80"
+                />
 
             <TextView
-                android:id="@+id/name2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/name1"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:text="200,000.00"
+                android:text="特色功能"
+                android:textSize="18sp"
+                android:layout_toRightOf="@+id/suqre"
+                android:layout_alignTop="@+id/suqre"
                 android:textColor="@color/black"
-                android:textSize="30sp" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"/>
 
-            <Button
-                android:id="@+id/v_besf"
-                android:layout_width="110dp"
-                android:layout_height="35dp"
-                android:layout_below="@+id/name2"
-                android:layout_centerHorizontal="true"
+            <RelativeLayout
+                android:id="@+id/selfmessage"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/suqre"
+                android:background="@drawable/layout_backofblue"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="15dp"
+                >
+                <TextView
+                    android:id="@+id/te1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个人信息"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:id="@+id/te2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="填写详细信息申请大额贷款"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    android:layout_below="@+id/te1"
+                    android:layout_marginLeft="10dp"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/selfinf"
+                    android:layout_marginRight="10dp"
+                    android:rotationY="20"/>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/safescore"
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/suqre"
+                android:background="@drawable/layout_backofpurpuse"
+                android:layout_toRightOf="@+id/selfmessage"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/te3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="安全评分"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:id="@+id/te4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="智能评估安全风险"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    android:layout_below="@+id/te3"
+                    android:layout_marginLeft="10dp"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/score"
+                    android:layout_marginRight="5dp"
+                    android:rotationY="20"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/wallet"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/selfmessage"
+                android:background="@drawable/layout_backofpink"
+                android:layout_alignLeft="@+id/selfmessage"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/te5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的钱包"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:id="@+id/te6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="借款情况、交易记录"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    android:layout_below="@+id/te5"
+                    android:layout_marginLeft="10dp"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/wallet"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:rotationY="20"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/watch"
+                android:layout_width="60dp"
+                android:layout_height="105dp"
+                android:layout_below="@+id/safescore"
+                android:background="@drawable/layout_backofyellow"
+                android:layout_alignLeft="@+id/safescore"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/te7"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="查看消息"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/recent"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:rotationY="20"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/activity"
+                android:layout_width="60dp"
+                android:layout_height="105dp"
+                android:layout_below="@+id/safescore"
+                android:background="@drawable/layout_backofgreen"
+                android:layout_toRightOf="@+id/watch"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/te8"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="爆款活动"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"/>
+
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/activity"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:rotationX="10"
+                    android:rotationY="20"/>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/AI"
+                android:layout_width="295dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/activity"
+                android:layout_marginLeft="35dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/layout_but"
-                android:text="我要借款"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:background="@drawable/layout_backofgold"
+                >
+
+                <TextView
+                    android:id="@+id/te9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="没有借过款?我怕被骗！"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"/>
+                <TextView
+                    android:id="@+id/te10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/te9"
+                    android:text="没关系，AI答疑帮助您！"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ai"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:rotationX="10"
+                    android:rotationY="20"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/suqre1"
+                android:layout_width="38dp"
+                android:layout_height="32dp"
+                android:layout_below="@+id/AI"
+                android:layout_marginTop="15dp"
+                android:background="#005A80"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/v_besf"
-                android:layout_centerHorizontal="true"
-                android:text="1千元借12个月，日费用1毛2起，年化利率(单利) 7.2%~24%"
-                android:textSize="8sp"
-                android:layout_marginTop="10dp"/>
+                android:text="小微用户专享"
+                android:textSize="18sp"
+                android:layout_toRightOf="@+id/suqre1"
+                android:layout_alignTop="@+id/suqre1"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_below="@+id/suqre1"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/color2">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="小微贷"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="生意经营·资金周转"
+                        android:textSize="16sp"
+                        android:layout_toRightOf="@+id/text1"
+                        android:layout_alignTop="@+id/text1"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="5dp"/>
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/nickel"
+                        android:layout_marginRight="10dp"
+                        />
+                    <RelativeLayout
+                        android:layout_width="280dp"
+                        android:layout_height="130dp"
+                        android:layout_below="@id/text1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/layout_back1">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="500,000¥       7.2%"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:textSize="26sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="最高可借额度                        年化利率(单利)起"
+                            android:textColor="#9C9B9B"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="45dp"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="额度更高·利率更低      企业户·个体户都可申请"
+                            android:textColor="#BC7B57"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="70dp"
+                            android:textSize="12sp"/>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:background="@drawable/layout_backofblue"
+                            android:layout_marginTop="100dp"
+                            android:layout_marginLeft="15dp"
+                            android:text="查看额度"
+                            android:textColor="@color/white"/>
+
+
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/suqre2"
+                android:layout_width="38dp"
+                android:layout_height="32dp"
+                android:layout_below="@+id/card2"
+                android:layout_marginTop="15dp"
+                android:background="#005A80"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="借钱攻略"
+                android:textSize="18sp"
+                android:layout_toRightOf="@+id/suqre2"
+                android:layout_alignTop="@+id/suqre2"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_below="@+id/suqre2"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   >
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/select"/>
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="60dp"
+                        android:src="@drawable/to"/>
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="120dp"
+                        android:src="@drawable/lightning"/>
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="170dp"
+                        android:src="@drawable/to"/>
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginLeft="230dp"
+                        android:src="@drawable/dai"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3分钟申请"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginLeft="15dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5分钟放款"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginLeft="115dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="灵活借还"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginLeft="210dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="纯线上更方便"
+                        android:textSize="11sp"
+                        android:layout_marginTop="93dp"
+                        android:layout_marginLeft="15dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最快五分钟到银行卡"
+                        android:textSize="11sp"
+                        android:layout_marginTop="93dp"
+                        android:layout_marginLeft="100dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="短期周转更灵活"
+                        android:textSize="11sp"
+                        android:layout_marginTop="93dp"
+                        android:layout_marginLeft="210dp"/>
+                    <View
+                        android:layout_width="280dp"
+                        android:layout_height="1dp"
+                        android:background="#DFDEDE"
+                        android:layout_marginTop="125dp"
+                        android:layout_centerHorizontal="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="更多指南"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="150dp"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="20dp"/>
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/layout_but"
+                        android:layout_marginTop="153dp"
+                        android:layout_marginLeft="165dp"
+                        android:text="借款指南"
+                        android:textSize="10sp"
+                        android:textColor="@color/white"/>
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/layout_but"
+                        android:layout_marginTop="153dp"
+                        android:layout_marginLeft="100dp"
+                        android:text="申请指南"
+                        android:textSize="10sp"
+                        android:textColor="@color/white"/>
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/layout_but"
+                        android:layout_marginTop="153dp"
+                        android:layout_marginLeft="230dp"
+                        android:text="还款指南"
+                        android:textSize="10sp"
+                        android:textColor="@color/white"/>
+
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@id/card3"/>
+
+
+
+
+
+
+
 
 
         </RelativeLayout>
 
 
-    </RelativeLayout>
-
-    <View
-        android:id="@+id/suqre"
-        android:layout_width="38dp"
-        android:layout_height="32dp"
-        android:layout_below="@+id/gradual"
-        android:layout_marginTop="15dp"
-        android:background="#005A80"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="特色功能"
-        android:textSize="18sp"
-        android:layout_toRightOf="@+id/suqre"
-        android:layout_alignTop="@+id/suqre"
-        android:textColor="@color/black"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"/>
-
-    <RelativeLayout
-        android:id="@+id/selfmessage"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/suqre"
-        android:background="@drawable/layout_backofblue"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="15dp"
-        >
-        <TextView
-            android:id="@+id/te1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="个人信息"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"/>
-        <TextView
-            android:id="@+id/te2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="填写详细信息申请大额贷款"
-            android:textColor="@color/white"
-            android:textSize="9sp"
-            android:layout_below="@+id/te1"
-            android:layout_marginLeft="10dp"/>
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/selfinf"
-            android:layout_marginRight="10dp"
-            android:rotationY="20"/>
+    </ScrollView>
 
 
 
-    </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/safescore"
-        android:layout_width="130dp"
-        android:layout_height="80dp"
-        android:layout_below="@+id/suqre"
-        android:background="@drawable/layout_backofpurpuse"
-        android:layout_toRightOf="@+id/selfmessage"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp">
-
-        <TextView
-            android:id="@+id/te3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="安全评分"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"/>
-        <TextView
-            android:id="@+id/te4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="智能评估安全风险"
-            android:textColor="@color/white"
-            android:textSize="9sp"
-            android:layout_below="@+id/te3"
-            android:layout_marginLeft="10dp"/>
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/score"
-            android:layout_marginRight="5dp"
-            android:rotationY="20"/>
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/wallet"
-        android:layout_width="150dp"
-        android:layout_height="80dp"
-        android:layout_below="@+id/selfmessage"
-        android:background="@drawable/layout_backofpink"
-        android:layout_alignLeft="@+id/selfmessage"
-        android:layout_marginTop="10dp">
-        <TextView
-            android:id="@+id/te5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="我的钱包"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"/>
-        <TextView
-            android:id="@+id/te6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="借款情况、交易记录"
-            android:textColor="@color/white"
-            android:textSize="9sp"
-            android:layout_below="@+id/te5"
-            android:layout_marginLeft="10dp"/>
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/wallet"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:rotationY="20"/>
-
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/watch"
-        android:layout_width="60dp"
-        android:layout_height="105dp"
-        android:layout_below="@+id/safescore"
-        android:background="@drawable/layout_backofyellow"
-        android:layout_alignLeft="@+id/safescore"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:id="@+id/te7"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:text="贷款流程"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"/>
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/recent"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="5dp"
-            android:rotationY="20"/>
-
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/activity"
-        android:layout_width="60dp"
-        android:layout_height="105dp"
-        android:layout_below="@+id/safescore"
-        android:background="@drawable/layout_backofgreen"
-        android:layout_toRightOf="@+id/watch"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp">
-        <TextView
-            android:id="@+id/te8"
-            android:layout_width="40dp"
-            android:layout_height="wrap_content"
-            android:text="爆款活动"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"/>
-
-        <ImageView
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/activity"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="5dp"
-            android:rotationX="10"
-            android:rotationY="20"/>
-
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/rLayout"
-        android:layout_width="295dp"
-        android:layout_height="80dp"
-        android:layout_below="@+id/activity"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/layout_backofgold"
-        >
-
-        <TextView
-            android:id="@+id/te9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="没有借过款?我怕被骗！"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"/>
-        <TextView
-            android:id="@+id/te10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/te9"
-            android:text="没关系，AI答疑帮助您！"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"/>
-
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/ai"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:rotationX="10"
-            android:rotationY="20"/>
-
-    </RelativeLayout>
 
 </RelativeLayout>

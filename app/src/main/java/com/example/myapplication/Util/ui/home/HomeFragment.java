@@ -80,6 +80,8 @@ public class HomeFragment extends Fragment {
             }
         });
         */
+
+
         btn_bow=root.findViewById(R.id.v_besf);
         btn_bow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,7 +100,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        relativeLayout = root.findViewById(R.id.rLayout);
+        relativeLayout = root.findViewById(R.id.AI);
         relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
