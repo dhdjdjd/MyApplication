@@ -2,7 +2,7 @@ package com.example.myapplication.Util;
 
 public class NetConst {
     // HTTP地址的前缀
-    public final static String HTTP_PREFIX = "http://172.20.10.5:8880/user/";
+    public final static String HTTP_PREFIX = "http://192.168.0.123:8880/user/";
     // WebSocket服务的前缀
     public final static String WEBSOCKET_PREFIX = "ws://192.168.1.7:8080/HttpServer/";
     public final static String BASE_IP = "192.168.1.7"; // 基础Socket服务的ip

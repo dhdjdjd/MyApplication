@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/u51"
+        android:icon="@drawable/home_icon"
         android:title="@string/title_home" />
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/u63"
+        android:icon="@drawable/desktop2_icon"
         android:title="发现" />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/u57"
+        android:icon="@drawable/my_icon"
         android:title="个人中心" />
 
 </menu>

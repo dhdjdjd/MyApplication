@@ -28,20 +28,20 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_toRightOf="@+id/t1head"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="50dp"
             android:background="@drawable/message"
             />
         <com.example.myapplication.Views.RoundImageViewByXfermode
             android:id="@+id/avatar_image"
-            android:layout_width="38dp"
-            android:layout_height="65dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/xin"
             android:layout_x="1dp"
             android:layout_y="1dp"
-            android:src="@drawable/headpicture" />
+            android:src="@drawable/headpicture2" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card1"

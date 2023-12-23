@@ -138,10 +138,10 @@ public class HomeFragment extends Fragment {
         Toolbar tl_head = root.findViewById(R.id.t1head);
         tl_head.setTitle("贷易控");
         mActivity.setSupportActionBar(tl_head);
-        tl_head.setTitleTextColor(Color.BLACK); // 设置工具栏的标题文字颜色
+        tl_head.setTitleTextColor(Color.WHITE); // 设置工具栏的标题文字颜色
         //tl_head.setLogo(R.drawable.ic_app); // 设置工具栏的标志图片
         tl_head.setSubtitle("风险控制RiskControl");// 设置工具栏的副标题文本
-        tl_head.setSubtitleTextColor(Color.BLACK); // 设置工具栏的副标题文字颜色
+        tl_head.setSubtitleTextColor(Color.WHITE); // 设置工具栏的副标题文字颜色
         //tl_head.setNavigationIcon(R.drawable.ic_back); // 设置工具栏左边的导航图标
         // 给tl_head设置导航图标的点击监听器
         // setNavigationOnClickListener必须放到setSupportActionBar之后，不然不起作用

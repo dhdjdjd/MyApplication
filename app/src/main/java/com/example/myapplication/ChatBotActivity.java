@@ -108,7 +108,7 @@ public class ChatBotActivity extends AppCompatActivity{
                 .readTimeout(300, TimeUnit.SECONDS)//设置读取超时时间
                 .writeTimeout(300, TimeUnit.SECONDS)//设置写的超时时间
                 .build();; // 创建一个okhttp客户端对象
-        Request request = new Request.Builder().get().url("http://172.20.10.6:8088/chat/bot/ans?question=" + question).build();
+        Request request = new Request.Builder().get().url("http://192.168.0.178:8088/chat/bot/ans?question=" + question).build();
         Call call = client.newCall(request); // 根据请求结构创建调用对象
         // 加入HTTP请求队列。异步调用，并设置接口应答的回调方法
         call.enqueue(new Callback() {

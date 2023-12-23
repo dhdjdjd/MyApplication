@@ -71,7 +71,10 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
         android:elevation="0dp"
-        android:background="@drawable/editext_selector"/>
+        android:background="@drawable/editext_selector"
+        android:textSize="12dp"
+        android:textAlignment="center"
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -131,7 +134,11 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="0dp"
         android:elevation="0dp"
-        android:background="@drawable/editext_selector"/>
+        android:background="@drawable/editext_selector"
+        android:textSize="12dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -175,9 +182,10 @@
         android:text=""
         android:paddingLeft="5dp"
         android:hint="填写数字，金额应当在0~20000之间"
-        android:textSize="12dp"
-        android:textAlignment="textStart"
         android:background="@drawable/editext_selector"
+        android:textSize="12dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
         />
 
     <TextView
@@ -205,13 +213,12 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="0dp"
-        android:textAlignment="textStart"
+        android:textAlignment="center"
         android:translationZ="0dp"
         android:background="@drawable/editext_selector"
-        android:text=""
-        android:paddingLeft="5dp"
         android:hint="零壹贰叁肆伍陆柒捌玖拾佰仟万"
         android:textSize="12dp"
+        android:textStyle="bold"
         />
 
     <TextView

@@ -154,16 +154,16 @@ public class SuccessScoreActivity extends AppCompatActivity implements View.OnCl
                     return "贷前信用";
                 }
                 if (v==1){
-                    return "资产估计";
+                    return "负载比率";
                 }
                 if (v==2){
                     return "健康状况";
                 }
                 if (v==3){
-                    return "收入状况";
+                    return "资产净值";
                 }
                 if (v==4){
-                    return "家庭开支";
+                    return "家庭收入";
                 }
                 return "";
             }
